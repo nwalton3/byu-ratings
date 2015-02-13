@@ -12,8 +12,8 @@
 
 /*** Small width ***/
 
-$fontSize:14px; 
-$lineHeight:19px;
+$fontSize: 0.875em; 
+$lineHeight: 1.3;
 
 body, button, input, select, textarea, 
 #search-container .gsc-control-cse, 
@@ -83,12 +83,11 @@ body {
 /*** Medium width ***/
 @media all and ( min-width: $med-width ) {
 
-	$fontSize:15px;
-	$lineHeight:20px;
+	$fontSize:0.9375em;
 
 	body, button, input, select, textarea {
 		font-size: $fontSize;
-		line-height: $lineHeight; }
+	}
 
 	h1 { font-size:  2.2em; line-height:40px; margin:30px 0px 20px; } // 33px
 	h2 { font-size:  1.8em; line-height:30px; margin:30px 0px 20px; } // 27px
@@ -107,7 +106,11 @@ body {
 
 /*** Large width ***/
 @media all and ( min-width: $large-width ) {
+	$fontSize:1em;
 
+	body, button, input, select, textarea {
+		font-size: $fontSize;
+	}
 }
 
 

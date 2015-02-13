@@ -5,7 +5,7 @@ extends _layout
 //-	Mixins
 //-	===============
 
-mixin answers(qusestionNumber, options)
+mixin answers(questionNumber, options)
 	- var optionList = [ ['Very Successful', 'Successful', 'Moderately Successful', 'Not Very Successful', 'Not at All Successful'], ['Very Effective', 'Effective', 'Moderately Effective', 'Not Very Effective', 'Not at All Effective'], ['Enhanced', 'Moderately Enhanced', '￼Slightly Enhanced', '￼No Effect', 'Detracted'] ];
 
 	div.options
@@ -70,7 +70,10 @@ block content
 	form
 		ol.questions
 
-			h2 Three of the expected learning outcomes for your course are listed below. In your judgment, how successfully have you achieved these outcomes:
+			h2 
+				span.marker Questions 1–3: 
+				| Three of the expected learning outcomes for your course are listed below. 
+				strong In your judgment, how successfully have you achieved these outcomes:
 
 			li.question
 				div.prompt The student will demonstrate a theoretical and practical knowledge of hearing tests and measurements in the field of communicative disorders.
@@ -84,7 +87,9 @@ block content
 				div.prompt The student will develop an understanding of the role of hearing and hearing disorders to the broader area of communication disorders.
 				+answers(3, 0)
 
-			h2 Instructor - David McPherson
+			h2
+				span.marker Questions 4–8: 
+				| Instructor - David McPherson
 
 			li.question
 				div.prompt How effective was this instructor (not the TA) in helping students who indicated a need for assistance?
