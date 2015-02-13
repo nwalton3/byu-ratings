@@ -1,0 +1,58 @@
+@import "shared/colors"
+
+
+.instructors
+	padding: 0.75em 1em 1em
+	background: $blue10
+	border: 1px solid $blue6
+	margin: 2.5em 0
+	border-radius: 0.25em
+	h1
+		margin: 0 0 0.25em
+		border-bottom: 1px solid #666
+	.photo
+		width: 100px
+		display: inline-block
+
+	h2
+		display: inline-block
+
+form
+	h2
+		border-top: 1px solid #666
+		font-size: 1.5em
+		margin-left: -1.33333em
+		padding: 1em 0 0
+
+	ol
+		margin-left: 2em
+
+
+.question
+	font-size: 1.1em
+	margin: 1.5em 0 2.5em
+	.options
+		margin: 1em 0
+
+	.option
+		position: relative
+		padding: 0.25em 0
+		input 
+			position: absolute
+			top: 1em
+			left: 1em
+		label 
+			position: relative
+			border: 1px solid $blue3
+			display: inline-block
+			padding: 0.5em 1em
+			width: 100%
+			text-align: center
+			border-radius: 1em
+			background-color: $blue10
+			margin-left: -0.1em
+			z-index: 2
+
+		input:checked + label
+			background-color: $blue3
+			color: white

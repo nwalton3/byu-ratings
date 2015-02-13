@@ -66,7 +66,7 @@ BYU Base styles
 
  */
 @import "base/basics";
-$brown4: transparent !global; // Reset html background color
+$brown4: transparent; // Reset html background color
 @import "base/type";
 @import "base/header";
 @import "base/search";

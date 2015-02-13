@@ -1,0 +1,26 @@
+/* line 4, ../src/sass/ratings.sass */
+.instructors { padding: 0.75em 1em 1em; background: #eff6fc; border: 1px solid #91b2d2; margin: 2.5em 0; border-radius: 0.25em; }
+/* line 10, ../src/sass/ratings.sass */
+.instructors h1 { margin: 0 0 0.25em; border-bottom: 1px solid #666666; }
+/* line 13, ../src/sass/ratings.sass */
+.instructors .photo { width: 100px; display: inline-block; }
+/* line 17, ../src/sass/ratings.sass */
+.instructors h2 { display: inline-block; }
+
+/* line 21, ../src/sass/ratings.sass */
+form h2 { border-top: 1px solid #666666; font-size: 1.5em; margin-left: -1.33333em; padding: 1em 0 0; }
+/* line 27, ../src/sass/ratings.sass */
+form ol { margin-left: 2em; }
+
+/* line 31, ../src/sass/ratings.sass */
+.question { font-size: 1.1em; margin: 1.5em 0 2.5em; }
+/* line 34, ../src/sass/ratings.sass */
+.question .options { margin: 1em 0; }
+/* line 37, ../src/sass/ratings.sass */
+.question .option { position: relative; padding: 0.25em 0; }
+/* line 40, ../src/sass/ratings.sass */
+.question .option input { position: absolute; top: 1em; left: 1em; }
+/* line 44, ../src/sass/ratings.sass */
+.question .option label { position: relative; border: 1px solid #114477; display: inline-block; padding: 0.5em 1em; width: 100%; text-align: center; border-radius: 1em; background-color: #eff6fc; margin-left: -0.1em; z-index: 2; }
+/* line 56, ../src/sass/ratings.sass */
+.question .option input:checked + label { background-color: #114477; color: white; }
