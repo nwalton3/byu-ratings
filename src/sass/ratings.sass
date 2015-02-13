@@ -1,4 +1,18 @@
+@import "compass"
+
 @import "shared/colors"
+@import "shared/mixins"
+@import "shared/variables"
+
+@import "base/type"
+@import "responsive/type"
+
+
+
+*
+	box-sizing: border-box
+	position: relative
+
 
 
 .instructors
@@ -31,28 +45,44 @@ form
 .question
 	font-size: 1.1em
 	margin: 1.5em 0 2.5em
+
+	.prompt
+		color: black
+		line-height: 1.4
+		margin-bottom: 1.25em
+
 	.options
 		margin: 1em 0
 
 	.option
-		position: relative
 		padding: 0.25em 0
+		margin: 0 -0.25em
 		input 
 			position: absolute
 			top: 1em
 			left: 1em
 		label 
-			position: relative
-			border: 1px solid $blue3
-			display: inline-block
+			border: 1px solid $blue7
+			display: block
 			padding: 0.5em 1em
-			width: 100%
 			text-align: center
-			border-radius: 1em
+			border-radius: 1.1em
 			background-color: $blue10
-			margin-left: -0.1em
 			z-index: 2
+			+background-image( linear-gradient( $blue10, mix($blue7, $blue8) ) )
+			&:hover
+				+background-image( linear-gradient( $blue11, $blue9 ) )
 
 		input:checked + label
-			background-color: $blue3
+			+background-image( linear-gradient( $blue4, $blue2 ) )
 			color: white
+
+	.feedback
+		textarea
+			width: 100%
+			resize: vertical
+
+
+
+
+

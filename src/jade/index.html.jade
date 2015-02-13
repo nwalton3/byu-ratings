@@ -25,8 +25,8 @@ mixin answers(qusestionNumber, options)
 			input(type="radio", id="q" + questionNumber + "-rating-1", name="q" + questionNumber + "-rating" value="1")
 			label(for="q"+ questionNumber + "-rating-1") #{ optionList[options][4] }
 						
-	div.text
-		textarea(placeholder="Please let us know why...", id="q" + questionNumber + "-text")
+	div.feedback
+		textarea(placeholder="Please let us know why...", id="q" + questionNumber + "-prompt", rows="10")
 
 
 //-	===============
@@ -38,9 +38,6 @@ block pageTitle
 
 block heading
 	| Student Ratings
-
-block byulink
-	| Brigham Young University
 
 block nav
 	.nav-container
@@ -61,60 +58,76 @@ block content
 			| Student feedback on faculty and courses is very important at BYU. This feedback is used by faculty to improve their teaching. Department chairs review your ratings as one of several pieces of information to assess teaching effectiveness. And University committees consider student feedback carefully in determining who is retained and who is promoted. Your responsible input is essential to assessing and improving teaching performance and student learning at BYU. 
 			strong Be honest, fair, and constructive as you complete this questionnaire.
 
+		p.length 13 questions
+
+
 	div.instructors
 		h1 COMD 438
 		div.photo
 			img(src="images/mcpherson.jpg")
 		h2 David McPherson
-	
+
 	form
 		ol.questions
 
 			h2 Three of the expected learning outcomes for your course are listed below. In your judgment, how successfully have you achieved these outcomes:
 
-			li: div.question The student will demonstrate a theoretical and practical knowledge of hearing tests and measurements in the field of communicative disorders.
+			li.question
+				div.prompt The student will demonstrate a theoretical and practical knowledge of hearing tests and measurements in the field of communicative disorders.
 				+answers(1, 0)
 
-			li: div.question The student will become proficient in the administration of standard audiological testing in adults and older children.
+			li.question
+				div.prompt The student will become proficient in the administration of standard audiological testing in adults and older children.
 				+answers(2, 0)
 
-			li: div.question The student will develop an understanding of the role of hearing and hearing disorders to the broader area of communication disorders.
+			li.question
+				div.prompt The student will develop an understanding of the role of hearing and hearing disorders to the broader area of communication disorders.
 				+answers(3, 0)
 
 			h2 Instructor - David McPherson
 
-			li: div.question How effective was this instructor (not the TA) in helping students who indicated a need for assistance?
+			li.question
+				div.prompt How effective was this instructor (not the TA) in helping students who indicated a need for assistance?
 				+answers(4, 1)
 
-			li: div.question How effective was the instructor (not the TA) in providing meaningful opportunities and encouragement for you to actively participate in the learning process?
+			li.question
+				div.prompt How effective was the instructor (not the TA) in providing meaningful opportunities and encouragement for you to actively participate in the learning process?
 				+answers(5, 1)
 
-			li: div.question How effective was the instructor (not the TA) in teaching challenging concepts or skills?
+			li.question
+				div.prompt How effective was the instructor (not the TA) in teaching challenging concepts or skills?
 				+answers(6, 1)
 
-			li: div.question How effective was this instructor in demonstrating respect for individual students and their opinions, questions, or concerns?
+			li.question
+				div.prompt How effective was this instructor in demonstrating respect for individual students and their opinions, questions, or concerns?
 				+answers(7, 1)
 
-			li: div.question How effective was the instructor in organizing the course content to enhance learning?
+			li.question
+				div.prompt How effective was the instructor in organizing the course content to enhance learning?
 				+answers(8, 1)
 
 			h2 What effect did this course and instructor have in helping you achieve the Aims of a BYU Education?
 
-			li: div.question Spiritually Strengthening:
+			li.question
+				div.prompt Spiritually Strengthening:
 				+answers(9, 2)
 
-			li: div.question Intellectually Enlarging:
+			li.question
+				div.prompt Intellectually Enlarging:
 				+answers(10, 2)
 
-			li: div.question Character Building:
+			li.question
+				div.prompt Character Building:
 				+answers(11, 2)
 
-			li: div.question Leading to Lifelong Learning and Service:
+			li.question
+				div.prompt Leading to Lifelong Learning and Service:
 				+answers(12, 2)
 
 			h2 Time Spent Outside of Class
 
-			li: div.question For this course, about how many hours per week did you spend out of class (doing assignments, readings, etc.)?
+			li.question
+				div.prompt For this course, about how many hours per week did you spend out of class (doing assignments, readings, etc.)?
 
 //- Remove stuff
 block breadcrumb
@@ -122,3 +135,4 @@ block search-menu
 block sign-in
 
 block footer
+	p Brigham Young University

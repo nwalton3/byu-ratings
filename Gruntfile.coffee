@@ -122,10 +122,10 @@ module.exports = (grunt) ->
 				options:
 					livereload: true
 				files: ['css/**/*']
-				tasks: ['newer:autoprefixer']
+				tasks: ['autoprefixer']
 			jade:
 				files: ['src/jade/**/*.jade']
-				tasks: ['newer:jade']
+				tasks: ['jade']
 			js:
 				files: ['src/js/script.js', 'src/js/touch.js']
 				tasks: ['newer:jshint', 'newer:uglify']
