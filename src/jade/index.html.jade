@@ -1,0 +1,123 @@
+extends _layout
+
+
+//-	===============
+//-	Mixins
+//-	===============
+
+mixin answers(qusestionNumber, options)
+	- var optionList = [ ['Very Successful', 'Successful', 'Moderately Successful', 'Not Very Successful', 'Not at All Successful'], ['Very Effective', 'Effective', 'Moderately Effective', 'Not Very Effective', 'Not at All Effective'], ['Enhanced', 'Moderately Enhanced', '￼Slightly Enhanced', '￼No Effect', 'Detracted'] ];
+
+	div.options
+		div.option
+			input(type="radio", id="q" + questionNumber + "-rating-5", name="q" + questionNumber + "-rating" value="5")
+			label(for="q"+ questionNumber + "-rating-5") #{ optionList[options][0] }
+		div.option
+			input(type="radio", id="q" + questionNumber + "-rating-4", name="q" + questionNumber + "-rating" value="4")
+			label(for="q"+ questionNumber + "-rating-4") #{ optionList[options][1] }
+		div.option
+			input(type="radio", id="q" + questionNumber + "-rating-3", name="q" + questionNumber + "-rating" value="3")
+			label(for="q"+ questionNumber + "-rating-3") #{ optionList[options][2] }
+		div.option
+			input(type="radio", id="q" + questionNumber + "-rating-2", name="q" + questionNumber + "-rating" value="2")
+			label(for="q"+ questionNumber + "-rating-2") #{ optionList[options][3] }
+		div.option
+			input(type="radio", id="q" + questionNumber + "-rating-1", name="q" + questionNumber + "-rating" value="1")
+			label(for="q"+ questionNumber + "-rating-1") #{ optionList[options][4] }
+						
+	div.text
+		textarea(placeholder="Please let us know why...", id="q" + questionNumber + "-text")
+
+
+//-	===============
+//-	Overrides
+//-	===============
+
+block pageTitle
+	| BYU - Student Ratings
+
+block heading
+	| Student Ratings
+
+block byulink
+	| Brigham Young University
+
+block nav
+	.nav-container
+
+		// Primary Nav
+		nav#primary-nav(role='navigation'): ul
+			li 
+				a.single.current(href='#') Home
+			li 
+				a.single(href='#') FAQ
+
+
+block content
+
+	header
+		h1 Questionnaire
+		p 
+			| Student feedback on faculty and courses is very important at BYU. This feedback is used by faculty to improve their teaching. Department chairs review your ratings as one of several pieces of information to assess teaching effectiveness. And University committees consider student feedback carefully in determining who is retained and who is promoted. Your responsible input is essential to assessing and improving teaching performance and student learning at BYU. 
+			strong Be honest, fair, and constructive as you complete this questionnaire.
+
+	div.instructors
+		h1 COMD 438
+		img(src="images/mcpherson.jpg")
+		h2 David McPherson
+	
+	form
+		ol.questions
+
+			h2 Three of the expected learning outcomes for your course are listed below. In your judgment, how successfully have you achieved these outcomes:
+
+			li: div.question The student will demonstrate a theoretical and practical knowledge of hearing tests and measurements in the field of communicative disorders.
+				+answers(1, 0)
+
+			li: div.question The student will become proficient in the administration of standard audiological testing in adults and older children.
+				+answers(2, 0)
+
+			li: div.question The student will develop an understanding of the role of hearing and hearing disorders to the broader area of communication disorders.
+				+answers(3, 0)
+
+			h2 Instructor - David McPherson
+
+			li: div.question How effective was this instructor (not the TA) in helping students who indicated a need for assistance?
+				+answers(4, 1)
+
+			li: div.question How effective was the instructor (not the TA) in providing meaningful opportunities and encouragement for you to actively participate in the learning process?
+				+answers(5, 1)
+
+			li: div.question How effective was the instructor (not the TA) in teaching challenging concepts or skills?
+				+answers(6, 1)
+
+			li: div.question How effective was this instructor in demonstrating respect for individual students and their opinions, questions, or concerns?
+				+answers(7, 1)
+
+			li: div.question How effective was the instructor in organizing the course content to enhance learning?
+				+answers(8, 1)
+
+			h2 What effect did this course and instructor have in helping you achieve the Aims of a BYU Education?
+
+			li: div.question Spiritually Strengthening:
+				+answers(9, 2)
+
+			li: div.question Intellectually Enlarging:
+				+answers(10, 2)
+
+			li: div.question Character Building:
+				+answers(11, 2)
+
+			li: div.question Leading to Lifelong Learning and Service:
+				+answers(12, 2)
+
+			h2 Time Spent Outside of Class
+
+			li: div.question For this course, about how many hours per week did you spend out of class (doing assignments, readings, etc.)?
+
+//- Remove stuff
+block breadcrumb
+block search-menu
+block sign-in
+
+block footer

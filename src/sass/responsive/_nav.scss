@@ -256,7 +256,7 @@ body.sideNav {
 
 
 /*** Medium width ***/
-@media all and ( min-width: $med-width ) {
+@media all and ( min-width: $small-width ) {
 
 	.menu-button {
 		width: auto;
@@ -341,7 +341,7 @@ body.sideNav {
 /* 
 * NOTE: The full-menu-width variable is found in _variables.scss
 */
-@media all and ( min-width: $full-menu-width ) {
+@media all and ( min-width: $small-width ) {
 	$header-top-height: 96px;
 	$search-width: 250px;
 	$menu-height: 36px;
@@ -630,20 +630,6 @@ body.sideNav {
 		}
 	}
 
-
-}
-
-
-
-
-
-
-
-
-
-
-/*** Large width ***/
-@media all and ( min-width: $large-width ) {
 
 }
 

@@ -30,13 +30,13 @@
 
 // Base CSS
 	@import "bootstrap/type";
-	@import "bootstrap/code";
+	// @import "bootstrap/code";
 //	@import "bootstrap/forms";
-	@import "bootstrap/tables";
+	// @import "bootstrap/tables";
 
 // Components: common
 //	@import "bootstrap/sprites";
-	@import "bootstrap/dropdowns";
+	// @import "bootstrap/dropdowns";
 //	@import "bootstrap/component-animations";
 //	@import "bootstrap/close";
 
@@ -48,7 +48,7 @@
 // Components: Nav
 //	@import "bootstrap/navs";
 //	@import "bootstrap/navbar";
-	@import "bootstrap/breadcrumbs";
+	// @import "bootstrap/breadcrumbs";
 //	@import "bootstrap/pagination";
 //	@import "bootstrap/pager";
 
@@ -78,18 +78,6 @@
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 
-@import "fontawesome/variables";
-@import "fontawesome/mixins";
-@import "fontawesome/path";
-@import "fontawesome/core";
-@import "fontawesome/larger";
-@import "fontawesome/fixed-width";
-@import "fontawesome/list";
-@import "fontawesome/bordered-pulled";
-@import "fontawesome/spinning";
-@import "fontawesome/rotated-flipped";
-@import "fontawesome/stacked";
-@import "fontawesome/icons";
 
 
 
@@ -102,14 +90,14 @@ BYU Styles
 */
 @import "responsive/bootstrap-override";
 @import "responsive/header-footer";
-@import "responsive/breadcrumb";
+// @import "responsive/breadcrumb";
 @import "responsive/search";
 @import "responsive/nav";
 
-@import "responsive/anythingslider";
-@import "responsive/slider";
+// @import "responsive/anythingslider";
+// @import "responsive/slider";
 
-@import "responsive/calendar";
+// @import "responsive/calendar";
 @import "responsive/content";
 @import "responsive/type";
 
