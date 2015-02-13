@@ -29,11 +29,7 @@ mixin addLinks(start, end, title)
 //-	PAGE START
 //-	===============
 
-!!! 5
-//[if lt IE 7]> <html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]
-//[if IE 7]>    <html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]
-//[if IE 8]>    <html lang="en" class="no-js oldie lt-ie9"><![endif]
-//[if gt IE 8]><!
+doctype html
 html.no-js(lang="en")
 	// <![endif]
 
@@ -56,45 +52,14 @@ html.no-js(lang="en")
 			link(rel='shortcut icon', href='favicon.ico')
 
 			// Styles
-			link(rel='stylesheet', href='//cloud.typography.com/75214/740862/css/fonts.css')
 			link(rel='stylesheet', href='css/base.css')
 			link(rel='stylesheet', href='css/responsive.css', media='all and (min-width:16em)')
-
-			// Scripts loaded via script loader. See notes in init.js file.
-			script(src='js/modernizr.js')
-			block settings
-				script.
-					// Use these settings to control the default scripts in the BYU template
-					window.pageSettings = {
-						jQueryURL:      "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
-						jQueryVersion:  "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
-						additionalScripts: [], // Array of strings specifying URLs for additional scripts to load
-
-						loadslider:     false, // Whether the image slider is present on the page
-						
-						gcse_search:    true, // Use the Google Custom Search Engine for the site's search?
-						gcse_search_id: '009932716493032633443:hlqjz33kfkc',  // Use this BYU GCSE id, or insert your own
-
-						analytics_key:  'UA-XXXXX-X' // Insert your Google Analytics key
-					}
-			script(src='js/init.js')
 
 
 	//-	===============
 	//-	BODY START
 	//-	===============
 	body
-		//if lt IE 7
-			p.chromeframe
-				| You are using an
-				strong outdated
-				| browser. Please
-				a(href='http://browsehappy.com/') upgrade your browser
-				| or
-				a(href='http://www.google.com/chromeframe/?redirect=true') activate Google Chrome Frame
-				| to improve your experience.
-
-
 
 
 		//-	===============

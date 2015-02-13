@@ -111,11 +111,6 @@ module.exports = (grunt) ->
 					else
 						include false
 
-		connect:
-			server:
-				options:
-					port: 9001
-					livereload: 9002
 		
 		watch:
 			options:
@@ -134,7 +129,7 @@ module.exports = (grunt) ->
 			js:
 				files: ['src/js/script.js', 'src/js/touch.js']
 				tasks: ['newer:jshint', 'newer:uglify']
-			livereload:
+			reload:
 				files: ['img/*', '*.html', 'js/*.min.js']
 				options:
 					livereload: true
@@ -143,4 +138,4 @@ module.exports = (grunt) ->
 
 	# Default task(s).
 	grunt.registerTask('compile', ['sass', 'autoprefixer', 'jade', 'jshint', 'uglify'])
-	grunt.registerTask('default', ['connect', 'watch'])
+	grunt.registerTask('default', ['watch'])

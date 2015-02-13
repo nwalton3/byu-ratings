@@ -1,93 +1,418 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+  <!-- <![endif]-->
+  
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>BYU Web Templates Testing</title>
+    <title>BYU - Student Ratings</title>
     <meta name="description" content="Description about your department.">
     <meta name="author" content="Your Department Name">
     <meta name="keywords" content="keyword 1, keyword 2, keyword 3">
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="template/img/favicon.ico">
-    <link rel="stylesheet" href="//cloud.typography.com/75214/740862/css/fonts.css">
+    <meta name="viewport" content="width=device-width, , initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Styles-->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <style>
-      li.break { margin-top: 1em; }
-      li a {display:block; padding:.15em 0;}
-    </style>
-    <script src="js/modernizr.js"></script>
-    <script src="js/init.js"></script>
+    <link rel="stylesheet" href="css/responsive.css" media="all and (min-width:16em)">
   </head>
   <body>
-    <div id="byu-bar">
-      <!-- BYU Logo -->
-      <h2><a href="http://www.byu.edu/" class="byu">BYU - Brigham Young University</a></h2>
+    <header id="main-header" role="banner">
+      <div id="header-top" class="wrapper">
+        <div id="logo">
+          <h2><a href="http://www.byu.edu/" class="byu">Brigham Young University</a></h2>
+        </div>
+        <!-- This should link to your organization's home page-->
+        <h1><a id="site-name" href="#" title="Change this link to your organization's home page">Student Ratings</a></h1>
+      </div>
+    </header>
+    <div id="content" role="main" class="wrapper clearfix ">
+      <header>
+        <h1>Student Questionnaire</h1>
+        <p>
+           
+          Student feedback on faculty and courses is very important at BYU. This feedback is used by faculty to improve their teaching. Department chairs review your ratings as one of several pieces of information to assess teaching effectiveness. And University committees consider student feedback carefully in determining who is retained and who is promoted. Your responsible input is essential to assessing and improving teaching performance and student learning at BYU. <strong>Be honest, fair, and constructive as you complete this questionnaire.</strong>
+        </p>
+      </header>
+      <div class="instructors">
+        <h1>COMD 438</h1><img src="images/mcpherson.jpg">
+        <h2>David McPherson</h2>
+      </div>
+      <form>
+        <ol class="questions">
+          <h2>Three of the expected learning outcomes for your course are listed below. In your judgment, how successfully have you achieved these outcomes:</h2>
+          <li>
+            <div class="question">The student will demonstrate a theoretical and practical knowledge of hearing tests and measurements in the field of communicative disorders.
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Very Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">Moderately Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">Not Very Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Not at All Successful</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">The student will become proficient in the administration of standard audiological testing in adults and older children.
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Very Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">Moderately Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">Not Very Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Not at All Successful</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">The student will develop an understanding of the role of hearing and hearing disorders to the broader area of communication disorders.
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Very Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">Moderately Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">Not Very Successful</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Not at All Successful</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <h2>Instructor - David McPherson</h2>
+          <li>
+            <div class="question">How effective was this instructor (not the TA) in helping students who indicated a need for assistance?
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Very Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">Moderately Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">Not Very Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Not at All Effective</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">How effective was the instructor (not the TA) in providing meaningful opportunities and encouragement for you to actively participate in the learning process?
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Very Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">Moderately Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">Not Very Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Not at All Effective</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">How effective was the instructor (not the TA) in teaching challenging concepts or skills?
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Very Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">Moderately Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">Not Very Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Not at All Effective</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">How effective was this instructor in demonstrating respect for individual students and their opinions, questions, or concerns?
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Very Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">Moderately Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">Not Very Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Not at All Effective</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">How effective was the instructor in organizing the course content to enhance learning?
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Very Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">Moderately Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">Not Very Effective</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Not at All Effective</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <h2>What effect did this course and instructor have in helping you achieve the Aims of a BYU Education?</h2>
+          <li>
+            <div class="question">Spiritually Strengthening:
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Moderately Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">￼Slightly Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">￼No Effect</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Detracted</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">Intellectually Enlarging:
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Moderately Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">￼Slightly Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">￼No Effect</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Detracted</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">Character Building:
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Moderately Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">￼Slightly Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">￼No Effect</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Detracted</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">Leading to Lifelong Learning and Service:
+              <div class="options">
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-5" name="qundefined-rating" value="5"/>
+                  <label for="qundefined-rating-5">Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-4" name="qundefined-rating" value="4"/>
+                  <label for="qundefined-rating-4">Moderately Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-3" name="qundefined-rating" value="3"/>
+                  <label for="qundefined-rating-3">￼Slightly Enhanced</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-2" name="qundefined-rating" value="2"/>
+                  <label for="qundefined-rating-2">￼No Effect</label>
+                </div>
+                <div class="option">
+                  <input type="radio" id="qundefined-rating-1" name="qundefined-rating" value="1"/>
+                  <label for="qundefined-rating-1">Detracted</label>
+                </div>
+              </div>
+              <div class="text">
+                <textarea placeholder="Please let us know why..." id="qundefined-text"></textarea>
+              </div>
+            </div>
+          </li>
+          <h2>Time Spent Outside of Class</h2>
+          <li>
+            <div class="question">For this course, about how many hours per week did you spend out of class (doing assignments, readings, etc.)?</div>
+          </li>
+        </ol>
+      </form>
     </div>
-    <div id="content" role="main" class="wrapper clearfix">
-      <h1>BYU Web Templates</h1>
-      <p>
-         
-        Source code at <strong><a href="https://github.com/byuweb/byu-responsive-dev">github.com/byuweb/byu-responsive-dev</a></strong>. Track and contribute ssues on <a href="https://github.com/byuweb/byu-responsive-dev/issues">the project issues page</a>.
-      </p>
-      <h4>Styles</h4>
-      <p>Info on built-in styles, including HTML5 boilerplate, Twitter bootstrap, FontAwesome icons, and styling for most basic HTML elements. </p>
-      <ul>
-        <li><a href="elements.html">HTML and CSS Elements (Style guide)</a></li>
-      </ul>
-      <h4>Page types</h4>
-      <ul>
-        <!-- li: a(href='pagetype1-update.html') Page Type 1 - BYU Home Page-->
-        <li class="break"><a href="pagetype2-update.html">Page Type 2 - Primary Organization</a></li>
-        <li><a href="pagetype3-update.html">Page Type 3 - Secondary Organization</a></li>
-        <li><a href="pagetype4-update.html">Page Type 4 - Simple Applications</a></li>
-      </ul>
-      <h4>Samples</h4>
-      <ul>
-        <li class="break"><a href="sample1-primaryorg-frontpage.html">Sample 1 - Frontpage - Primary Organization</a></li>
-        <li><a href="sample2-primaryorg-page.html">Sample 2 - Simple page - Primary Organization</a></li>
-        <li><a href="sample3-primaryorg-onesidebar.html">Sample 3 - One Sidebar - Primary Organization</a></li>
-        <li><a href="sample4-primaryorg-twosidebars.html">Sample 4 - Two Sidebar - Primary Organization</a></li>
-        <li><a href="sample5-application-sidenav.html">Sample 5 - Application with sidebar navigation</a></li>
-        <!-- li: a(href='sample5-secondaryorg-sixcolumns.html') Sample 5 - Six Columns - Secondary Organization-->
-      </ul>
-      <h4>Header only</h4>
-      <p>This is the bare-bones of the BYU web style. There are a lot of options for the content area of a site. Things can vary quite a bit but if the header and the typography fit within the BYU brand, the site will still feel like it's part of the BYU family. </p>
-      <ul>
-        <li class="break"><a href="header.html">Header and typography only (BYU Banner)</a></li>
-        <li><a href="header-org.html">Header and typography only (Organization Banner)</a></li>
-        <li><a href="header-nav.html">With primary and secondary nav</a></li>
-        <li><a href="header-all.html">With nav, search, and sign-in</a></li>
-      </ul>
-      <h4>Application banners</h4>
-      <p>Used for pages that do not use BYU page templates in any way</p>
-      <ul>
-        <li class="break"><a href="pageheader1.html">Page Header 1 - BYU banner with BYU logo only</a></li>
-        <li><a href="pageheader2.html">Page Header 2 - BYU banner with sign-in button</a></li>
-        <li><a href="pageheader3.html">Page Header 3 - BYU banner with search</a></li>
-        <li><a href="pageheader4.html">Page Header 4 - BYU banner with sign-in and search</a></li>
-        <li><a href="pageheader5.html">Page Header 5 - BYU banner parent organization name</a></li>
-      </ul>
-      <h4>Error Pages</h4>
-      <p>Always useful to have</p>
-      <ul>
-        <li class="break"><a href="404.html">404 - Page not found</a></li>
-        <li><a href="500.html">500 - Internal server error</a></li>
-      </ul>
-      <!--
-      <h2>Legacy pages</h2>
-      <ul>
-        <li><a href="Page Type 2 - Primary Organization.html">Page Type 2 - Primary Organization</a></li>
-        <li><a href="Page Type 3 - Secondary Organization.html">Page Type 3 - Secondary Organization</a></li>
-        <li><a href="Page Type 4 - Applications.html">Page Type 4 - Applications</a></li>
-        <li><a href="Page Type 4 - Simple Applications.html">Page Type 4 - Simple Applications</a></li>
-        <li class="break"><a href="Sample 1 - Frontpage - Primary Organization.html">Sample 1 - Frontpage - Primary Organization</a></li>
-        <li><a href="Sample 2 - Simple page - Primary Organization.html">Sample 2 - Simple page - Primary Organization</a></li>
-        <li><a href="Sample 3 - One Sidebar - Primary Organization.html">Sample 3 - One Sidebar - Primary Organization</a></li>
-        <li><a href="Sample 4 - Two Sidebar - Primary Organization.html">Sample 4 - Two Sidebar - Primary Organization</a></li>
-        <li><a href="Sample 5 - Six Columns - Secondary Organization.html">Sample 5 - Six Columns - Secondary Organization</a></li>
-      </ul>
-      -->
+    <div class="nav-container">
+      <!-- Primary Nav-->
+      <nav id="primary-nav" role="navigation">
+        <ul>
+          <li> <a href="#" class="single current">Home</a></li>
+          <li> <a href="#" class="single">FAQ</a></li>
+        </ul>
+      </nav>
     </div>
+    <script>
+      /* Google Analytics: change UA-XXXXX-X to be your site's ID. */
+      var _gaq=[['_setAccount', pageSettings.google_analytics_key],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
   </body>
 </html>

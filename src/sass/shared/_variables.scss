@@ -9,11 +9,11 @@ $asset-base: '//home.byu.edu/home/sites/default/files/global/';
 
 // Screen width breakpoints
 
-$small-width: 256px;	// 256px - Doesn't need to be explicitly used, as responsive styles aren't loaded in the markup until this point
-$med-width: 600px;		// 600px - Tablets
-$large-width: 900px;	// 900px - Tablets, desktops
-$larger-width: 1146px;	// 1146px - Desktops (940px content width with 9% margins)
-$extralarge-width: 1500px;	// 1520px - It's huuuge!
+$small-width: 16em;	// 256px - Doesn't need to be explicitly used, as responsive styles aren't loaded in the markup until this point
+$med-width: 37.5em;		// 600px - Tablets
+$large-width: 56.25em;	// 900px - Tablets, desktops
+$larger-width: 71.625;	// 1146px - Desktops (940px content width with 9% margins)
+$extralarge-width: 95em;	// 1520px - It's huuuge!
 
 // THIS CAN CHANGE FOR EACH SITE THAT USES THE TEMPLATE.
 // Probably the lowest threshold that should be used is 45em.
@@ -22,14 +22,14 @@ $full-menu-width: 960px;	// 960px - Menu should be in the header at this screen 
 
 
 // Fonts
-$sans-font-stack: "Whitney SSm A", "Whitney SSm B", "OpenSans", "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande","Lucida Sans Unicode","Lucida Sans", Helvetica,Arial,sans-serif;
+$sans-font-stack: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande","Lucida Sans Unicode","Lucida Sans", Helvetica,Arial,sans-serif;
 $sans-font-weight: 500;
 $sans-font-weight-bold: 600;
-$serif-font-stack: "Sentinel A", "Sentinel B", "CreteRound", "Palatino", "DroidSerif", "Droid Serif", Georgia, serif;
+$serif-font-stack: "Palatino", "DroidSerif", "Droid Serif", Georgia, serif;
 $serif-font-weight: 500;
-$serif-ssm-font-stack: "Sentinel SSm A", "Sentinel SSm B", "Sentinel A", "Sentinel B", "CreteRound", "Palatino", "DroidSerif", "Droid Serif", Georgia, serif;
+$serif-ssm-font-stack: "Palatino", "DroidSerif", "Droid Serif", Georgia, serif;
 $serif-ssm-font-weight: 300;
-$byu-font-stack: "Requiem Text A", "Requiem Text B", "Palatino", Georgia, serif;
+$byu-font-stack: "Palatino", Georgia, serif;
 $byu-font-weight: 400;
 
 
