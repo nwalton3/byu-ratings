@@ -36,6 +36,7 @@
 	margin-left: 0
 
 	h2
+		clear: both
 		font-size: 1.25em
 		padding: 0 5% 1em
 		// background: $yellow1
@@ -65,16 +66,16 @@
 	&:before
 		content: counter(question-counter)
 		counter-increment: question-counter
-		width: 2.2em
-		height: 2.2em
+		width: 2em
+		height: 2em
 		display: block
-		background-color: $blue4
+		background-color: $blue5
 		color: white
-		padding: 0.6em 0
+		padding: 0.5em 0
 		text-align: center
-		border-radius: 1.1em
+		border-radius: 1em
 		line-height: 1
-		margin: -1.1em 0 0.5em -0.25em
+		margin: -1em 0 0.5em -0.25em
 		font-size: 0.9em
 		font-weight: bold
 		text-shadow: 0 0 10px rgba($blue0, 0.5)
@@ -118,6 +119,29 @@
 			resize: vertical
 
 
+
+@media (min-width: $med-width)
+
+	.questions h2 .marker
+		margin: 0 -0.5em 1em
+		padding: 0.75em
+		border-radius: 0.25em
+		font-size: 0.8em
+
+@media (min-width: $large-width)
+	.questions h2 .marker
+		font-size: 0.75em
+
+	.question
+		clear: both
+		border-bottom: 1px solid #fff
+		.options
+			width: 45%
+			float: left
+		.feedback
+			width: 50%
+			float: left
+			margin: 1.1em 0 0 3%
 
 
 
