@@ -5,8 +5,8 @@ extends _layout
 //-	Mixins
 //-	===============
 
-mixin answers(questionNumber, options)
-	- var optionList = [ ['Very Successful', 'Successful', 'Moderately Successful', 'Not Very Successful', 'Not at All Successful'], ['Very Effective', 'Effective', 'Moderately Effective', 'Not Very Effective', 'Not at All Effective'], ['Enhanced', 'Moderately Enhanced', 'Slightly Enhanced', 'No Effect', 'Detracted'], ['0 hours', '1–5 hours', '6–10 hours', '11–15 hours', '16+ hours'] ];
+mixin answers(questionNumber, options, placeholder)
+	- var optionList = [ ['Very Successful', 'Successful', 'Moderately Successful', 'Not Very Successful', 'Not at All Successful'], ['Very Effective', 'Effective', 'Moderately Effective', 'Not Very Effective', 'Not at All Effective'], ['Enhanced', 'Moderately Enhanced', 'Slightly Enhanced', 'No Effect', 'Detracted'] ];
 
 	div.options
 		div.option
@@ -26,7 +26,7 @@ mixin answers(questionNumber, options)
 			label(for="q"+ questionNumber + "-rating-1") #{ optionList[options][4] }
 						
 	div.feedback
-		textarea(placeholder="Comments highly encouraged", id="q" + questionNumber + "-prompt", rows="10")
+		textarea(placeholder="(Optional) Please comment on " + placeholder, id="q" + questionNumber + "-prompt", rows="10")
 
 
 //-	===============
@@ -37,7 +37,7 @@ block pageTitle
 	| BYU - Student Ratings
 
 block heading
-	| Student Ratings
+	| Student Ratings of the Learning Experience
 
 block nav
 	.nav-container
@@ -52,9 +52,11 @@ block nav
 
 block content
 
+	div.alert Oops! It looks like you forgot to answer some of the questions. They're marked below in red.
+
 	header
 		h1 Questionnaire
-		p 
+		p.instructions
 			| Student feedback on faculty and courses is very important at BYU. This feedback is used by faculty to improve their teaching. Department chairs review your ratings as one of several pieces of information to assess teaching effectiveness. And University committees consider student feedback carefully in determining who is retained and who is promoted. Your responsible input is essential to assessing and improving teaching performance and student learning at BYU. 
 			strong Be honest, fair, and constructive as you complete this questionnaire.
 
@@ -75,69 +77,79 @@ block content
 				|  Three of the expected learning outcomes for your course are listed below. 
 				strong In your judgment, how successfully have you achieved these outcomes:
 
-			li.question
+			li.question.error
+				p.alert Please choose a response
 				div.prompt The student will demonstrate a theoretical and practical knowledge of hearing tests and measurements in the field of communicative disorders.
-				+answers(1, 0)
+				+answers(1, 0, "this outcome")
 
 			li.question
 				div.prompt The student will become proficient in the administration of standard audiological testing in adults and older children.
-				+answers(2, 0)
+				+answers(2, 0, "this outcome")
 
 			li.question
 				div.prompt The student will develop an understanding of the role of hearing and hearing disorders to the broader area of communication disorders.
-				+answers(3, 0)
+				+answers(3, 0, "this outcome")
 
 			h2
 				span.marker Questions 4–8:
-				|  Instructor - David McPherson
+				strong Instructor - David McPherson
 
 			li.question
 				div.prompt How effective was this instructor (not the TA) in helping students who indicated a need for assistance?
-				+answers(4, 1)
+				+answers(4, 1, "instructor helpfulness")
 
 			li.question
 				div.prompt How effective was the instructor (not the TA) in providing meaningful opportunities and encouragement for you to actively participate in the learning process?
-				+answers(5, 1)
+				+answers(5, 1, "the instructor encouraging participation")
 
 			li.question
 				div.prompt How effective was the instructor (not the TA) in teaching challenging concepts or skills?
-				+answers(6, 1)
+				+answers(6, 1, "the instructor teaching challenging material")
 
 			li.question
 				div.prompt How effective was this instructor in demonstrating respect for individual students and their opinions, questions, or concerns?
-				+answers(7, 1)
+				+answers(7, 1, "instructor respect")
 
 			li.question
 				div.prompt How effective was the instructor in organizing the course content to enhance learning?
-				+answers(8, 1)
+				+answers(8, 1, "instructor organization")
 
 			h2
 				span.marker Questions 9–12:
-				|  What effect did this course and instructor have in helping you achieve the Aims of a BYU Education?
+				strong What effect did this course and instructor have in helping you achieve the Aims of a BYU Education?
 
 			li.question
 				div.prompt Spiritually Strengthening:
-				+answers(9, 2)
+				+answers(9, 2, "this BYU Aim")
 
 			li.question
 				div.prompt Intellectually Enlarging:
-				+answers(10, 2)
+				+answers(10, 2, "this BYU Aim")
 
 			li.question
 				div.prompt Character Building:
-				+answers(11, 2)
+				+answers(11, 2, "this BYU Aim")
 
 			li.question
 				div.prompt Leading to Lifelong Learning and Service:
-				+answers(12, 2)
+				+answers(12, 2, "this BYU Aim")
 
 			h2
 				span.marker Question 13:
-				|  Time Spent Outside of Class
+				strong Time Spent Outside of Class
 
 			li.question
 				div.prompt For this course, about how many hours per week did you spend out of class (doing assignments, readings, etc.)?
-				+answers(13, 3)
+				
+				div.options.time
+					input(type="number", min="0" name="q13-rating" id="q13-rating")
+					label(for="q13-rating") hours per week
+
+				div.feedback
+					textarea(placeholder="(Optional) Please comment on time spent", id="q13-prompt", rows="10")
+
+		input(type="button" value="Clear")
+		input(type="submit" value="Submit ratings for COMD 438")
 
 
 //- Remove stuff

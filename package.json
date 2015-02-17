@@ -2,6 +2,7 @@
   "name": "BYU-Templates",
   "version": "2.0.0",
   "devDependencies": {
+    "bootstrap-sass": "^3.3.3",
     "coffee-script": "*",
     "grunt": "~0.4.x",
     "grunt-autoprefixer": "0.6.x",
