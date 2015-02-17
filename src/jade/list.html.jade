@@ -1,0 +1,91 @@
+extends _layout
+
+
+//-	===============
+//-	Overrides
+//-	===============
+
+
+block stylesheet
+	link(rel='stylesheet', href='css/ratings-list.css')
+
+block pageTitle
+	| BYU - Student Ratings
+
+block heading
+	| Student Ratings of the Learning Experience
+
+block nav
+	.nav-container
+
+		// Primary Nav
+		nav#primary-nav(role='navigation'): ul
+			li 
+				a.single.current(href='#') Home
+			li 
+				a.single(href='#') FAQ
+
+
+block content
+	h1 
+
+	#dynamic(name='dynamic')
+
+		p.instructions Student ratings are an important part of evaluation and improvement at BYU.  Results are used for faculty and course development and to evaluate faculty for promotion and continuing status.  Your thoughtful and candid feedback is appreciated.
+		
+		ul.instructions
+			li
+				| Your responses will be confidential unless you identify yourself in the &quot;Comments&quot; section. 
+				b You do not need to include your name in your comments to receive credit.
+			li
+				b If you need to receive credit, 
+				| check the &quot;Report Completion to Instructor&quot; box next to the course and 
+				b only your name
+				|  without your responses will be reported to the instructor.
+			li
+				| Your instructors will receive your responses anonymously 
+				i after
+				|  they have submitted grades.
+
+		table.listing
+			thead
+				tr
+					th.course Course / Instructor(s)
+					th.period Rating Period
+					th.status Status
+					th.report 
+						| Report Completion to Instructor
+						span.star *
+			tbody
+				tr
+					td.course
+						div CE EN 304-002: Metals, Woods, &amp; Composites
+						div Perry, Ernest C
+					td.period
+						| Thursday, February 12
+						br
+						| through
+						br
+						| Monday, March 2
+					td.status
+						input(type='button', value='Rate', onclick="javascript:RatePilot('F651E483-0DCA-406C-A901-52E1EB28F314');")
+					td.report
+						input(type='checkbox', onclick="javascript:NotifyPilot('ReportOff', '001EA2D5-3577-F63E-71DF-12877E1E235A');", checked='checked', disabled='')
+		p
+			span.star * 
+			| This option appears AFTER the ratings are completed. If it is checked, your instructor can see that you have completed the ratings once 5 or more class members have rated the course.  The instructor will 
+			b NOT
+			|  see your responses.
+		
+		p Please email comments, questions, or suggestions to StudentRatings@byu.edu
+
+
+
+
+
+//- Remove stuff
+block breadcrumb
+block search-menu
+block sign-in
+
+block footer

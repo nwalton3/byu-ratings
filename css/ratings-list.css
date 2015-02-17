@@ -1,0 +1,166 @@
+/*** Type ***/
+/* Make this the same color as the bottom footer */
+html { background-color: #dddddd; }
+
+body { background-color: #fff; }
+
+body, button, input, select, textarea { color: #444; font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; -webkit-text-size-adjust: 100%; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Palatino", "DroidSerif", "Droid Serif", Georgia, serif; margin: 10px 0; line-height: 1.2; }
+
+h2, h3, h4, h5, h6 { color: #444; }
+
+h1 { font-size: 2em; margin: 20px 0 10px; line-height: 1.1; }
+
+h2 { font-size: 1.65em; margin: 15px 0 10px; line-height: 1.1; }
+
+h3 { font-size: 1.25em; }
+
+h4 { font-size: 1.1em; }
+
+h5 { font-size: 1em; }
+
+h6 { font-size: .9em; }
+
+p, pre { margin: 10px 0; }
+
+code { color: #d14; }
+
+a { -moz-transition: background 0.1s ease; -o-transition: background 0.1s ease; -webkit-transition: background 0.1s ease; transition: background 0.1s ease; }
+
+/*!
+
+* Type 
+*
+*/
+/*** Small width ***/
+body, button, input, select, textarea, #search-container .gsc-control-cse, #search-container .gsc-control-cse .gsc-table-result { font-size: 0.875em; line-height: 1.3; font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 500; }
+
+#header-top h1 { font-family: "Palatino", "DroidSerif", "Droid Serif", Georgia, serif; font-weight: 300; }
+
+h1, h2 { font-family: "Palatino", "DroidSerif", "Droid Serif", Georgia, serif; font-weight: 500; }
+
+h2 .parentlink { font-family: "Palatino", Georgia, serif; font-weight: 400; }
+
+h3, h4, h5, h6 { font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 600; }
+
+h1 { font-size: 2em; margin: 30px 0px 10px; }
+
+h2 { font-size: 1.65em; margin: 25px 0px 10px; }
+
+h3 { font-size: 1.25em; margin: 20px 0px 10px; line-height: 1.25; }
+
+h4 { font-size: 1.1em; margin: 15px 0px 10px; line-height: 1.3; }
+
+h5 { font-size: 1em; margin: 10px 0px 10px; line-height: 1.3; }
+
+h6 { font-size: .9em; margin: 10px 0px 10px; line-height: 1.3; }
+
+a.mybyu, a.sign-in, .open #search-button, #search-submit, .gcse-wrapper input.gsc-search-button, .nav-container a { font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 500; }
+
+.nav-container .mega a, .nav-container .sub a { font-weight: 500; }
+
+#primary-nav .mega li.featured a { font-weight: 600; }
+
+body th, body tfoot { font-weight: 500; }
+body strong, body dt { font-weight: 600; }
+
+.sc, .small-caps { font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 500; font-style: normal; }
+
+.lnum, .lining-numbers { font-family: "Whitney SSm Lining Num A", "Whitney SSm Lining Num B", "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 500; font-style: normal; }
+
+#page-footer h2 { font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 600; }
+
+/*** Medium width ***/
+@media all and (min-width: 37.5em) { body, button, input, select, textarea { font-size: 0.9375em; }
+  h1 { font-size: 2.2em; line-height: 40px; margin: 30px 0px 20px; }
+  h2 { font-size: 1.8em; line-height: 30px; margin: 30px 0px 20px; }
+  h3 { font-size: 1.3em; line-height: 25px; margin: 25px 0px 10px; }
+  h4 { font-size: 1.15em; line-height: 20px; margin: 25px 0px 10px; }
+  h5 { font-size: 1em; line-height: 20px; margin: 20px 0px 10px; }
+  h6 { font-size: .9em; line-height: 20px; margin: 15px 0px 10px; } }
+/*** Large width ***/
+@media all and (min-width: 56.25em) { body, button, input, select, textarea { font-size: 1em; } }
+/*** Larger width ***/
+/*** Extra large width ***/
+@media all and (min-width: 95em) { body, button, input, select, textarea { font-size: 16px; line-height: 22px; } }
+.btn, .listing input[type=button] { display: inline-block; margin-bottom: 0; font-weight: normal; text-align: center; vertical-align: middle; touch-action: manipulation; cursor: pointer; background-image: none; border: 1px solid transparent; white-space: nowrap; padding: 6px 12px; font-size: 14px; line-height: 1.42857; border-radius: 4px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.btn:focus, .listing input[type=button]:focus, .btn.focus, .listing input.focus[type=button], .btn:active:focus, .listing input[type=button]:active:focus, .btn:active.focus, .listing input[type=button]:active.focus, .btn.active:focus, .listing input.active[type=button]:focus, .btn.active.focus, .listing input.active.focus[type=button] { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
+.btn:hover, .listing input[type=button]:hover, .btn:focus, .listing input[type=button]:focus, .btn.focus, .listing input.focus[type=button] { color: #333; text-decoration: none; }
+.btn:active, .listing input[type=button]:active, .btn.active, .listing input.active[type=button] { outline: 0; background-image: none; -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+.btn.disabled, .listing input.disabled[type=button], .btn[disabled], .listing input[disabled][type=button], fieldset[disabled] .btn, fieldset[disabled] .listing input[type=button], .listing fieldset[disabled] input[type=button] { cursor: not-allowed; pointer-events: none; opacity: 0.65; filter: alpha(opacity=65); -webkit-box-shadow: none; box-shadow: none; }
+
+.btn-default { color: #333; background-color: #fff; border-color: #ccc; }
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle { color: #333; background-color: #e6e6e6; border-color: #adadad; }
+.btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle { background-image: none; }
+.btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active { background-color: #fff; border-color: #ccc; }
+.btn-default .badge { color: #fff; background-color: #333; }
+
+.btn-primary { color: #fff; background-color: #337ab7; border-color: #2e6da4; }
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle { color: #fff; background-color: #286090; border-color: #204d74; }
+.btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle { background-image: none; }
+.btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active { background-color: #337ab7; border-color: #2e6da4; }
+.btn-primary .badge { color: #337ab7; background-color: #fff; }
+
+.btn-success, .listing input[type=button] { color: #fff; background-color: #117725; border-color: #086e1c; }
+.btn-success:hover, .listing input[type=button]:hover, .btn-success:focus, .listing input[type=button]:focus, .btn-success.focus, .listing input.focus[type=button], .btn-success:active, .listing input[type=button]:active, .btn-success.active, .listing input.active[type=button], .open > .btn-success.dropdown-toggle, .listing .open > input.dropdown-toggle[type=button] { color: #fff; background-color: #0b4a17; border-color: #04350d; }
+.btn-success:active, .listing input[type=button]:active, .btn-success.active, .listing input.active[type=button], .open > .btn-success.dropdown-toggle, .listing .open > input.dropdown-toggle[type=button] { background-image: none; }
+.btn-success.disabled, .listing input.disabled[type=button], .btn-success.disabled:hover, .listing input.disabled[type=button]:hover, .btn-success.disabled:focus, .listing input.disabled[type=button]:focus, .btn-success.disabled.focus, .listing input.disabled.focus[type=button], .btn-success.disabled:active, .listing input.disabled[type=button]:active, .btn-success.disabled.active, .listing input.disabled.active[type=button], .btn-success[disabled], .listing input[disabled][type=button], .btn-success[disabled]:hover, .listing input[disabled][type=button]:hover, .btn-success[disabled]:focus, .listing input[disabled][type=button]:focus, .btn-success[disabled].focus, .listing input[disabled].focus[type=button], .btn-success[disabled]:active, .listing input[disabled][type=button]:active, .btn-success[disabled].active, .listing input[disabled].active[type=button], fieldset[disabled] .btn-success, fieldset[disabled] .listing input[type=button], .listing fieldset[disabled] input[type=button], fieldset[disabled] .btn-success:hover, fieldset[disabled] .listing input[type=button]:hover, .listing fieldset[disabled] input[type=button]:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .listing input[type=button]:focus, .listing fieldset[disabled] input[type=button]:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] .listing input.focus[type=button], .listing fieldset[disabled] input.focus[type=button], fieldset[disabled] .btn-success:active, fieldset[disabled] .listing input[type=button]:active, .listing fieldset[disabled] input[type=button]:active, fieldset[disabled] .btn-success.active, fieldset[disabled] .listing input.active[type=button], .listing fieldset[disabled] input.active[type=button] { background-color: #117725; border-color: #086e1c; }
+.btn-success .badge, .listing input[type=button] .badge { color: #117725; background-color: #fff; }
+
+.btn-info { color: #fff; background-color: #5bc0de; border-color: #46b8da; }
+.btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle { color: #fff; background-color: #31b0d5; border-color: #269abc; }
+.btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle { background-image: none; }
+.btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled].focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active { background-color: #5bc0de; border-color: #46b8da; }
+.btn-info .badge { color: #5bc0de; background-color: #fff; }
+
+.btn-warning { color: #fff; background-color: #f0ad4e; border-color: #eea236; }
+.btn-warning:hover, .btn-warning:focus, .btn-warning.focus, .btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle { color: #fff; background-color: #ec971f; border-color: #d58512; }
+.btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle { background-image: none; }
+.btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled].focus, .btn-warning[disabled]:active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning.focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active { background-color: #f0ad4e; border-color: #eea236; }
+.btn-warning .badge { color: #f0ad4e; background-color: #fff; }
+
+.btn-danger { color: #fff; background-color: #d9534f; border-color: #d43f3a; }
+.btn-danger:hover, .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle { color: #fff; background-color: #c9302c; border-color: #ac2925; }
+.btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle { background-image: none; }
+.btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active { background-color: #d9534f; border-color: #d43f3a; }
+.btn-danger .badge { color: #d9534f; background-color: #fff; }
+
+.btn-link { color: #337ab7; font-weight: normal; border-radius: 0; }
+.btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link { background-color: transparent; -webkit-box-shadow: none; box-shadow: none; }
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active { border-color: transparent; }
+.btn-link:hover, .btn-link:focus { color: #23527c; text-decoration: underline; background-color: transparent; }
+.btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus { color: #777777; text-decoration: none; }
+
+.btn-lg { padding: 10px 16px; font-size: 18px; line-height: 1.33333; border-radius: 6px; }
+
+.btn-sm { padding: 5px 10px; font-size: 12px; line-height: 1.5; border-radius: 3px; }
+
+.btn-xs { padding: 1px 5px; font-size: 12px; line-height: 1.5; border-radius: 3px; }
+
+.btn-block { display: block; width: 100%; }
+
+.btn-block + .btn-block { margin-top: 5px; }
+
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block { width: 100%; }
+
+*, *:before, *:after { box-sizing: border-box; position: relative; }
+
+#dynamic p, #dynamic li { max-width: 50em; }
+#dynamic li { margin-bottom: 0.5em; }
+
+.star { color: #cc3f4c; position: absolute; top: 0; left: -0.75em; }
+
+.listing { margin: 2em -5.555%; }
+.listing th { background-color: #369; border-color: #628cb6; color: #f9fcfe; }
+.listing th, .listing td { padding: 0.5em; }
+.listing input[type=button] { box-shadow: inset 0 -1em 1.5em -1em #004818; border-radius: 1.25em; padding-left: 1em; padding-right: 1em; transition: all 150ms ease; }
+.listing .period { display: none; }
+.listing .star { position: static; color: #eebfc3; padding-left: 0.25em; }
+
+@media (min-width: 37.5em) { .listing { margin: 2em 0; }
+  .listing th, .listing td { padding: 0.5em 1em; }
+  .listing input[type=button] { padding-left: 1.5em; padding-right: 1.5em; }
+  .listing .period { display: table-cell; } }
+
+/*# sourceMappingURL=ratings-list.css.map */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- <![endif]-->
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, , initial-scale=1, user-scalable=no">
+    <title>BYU - Student Ratings</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Styles-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/responsive.css" media="all and (min-width:16em)">
+    <link rel="stylesheet" href="css/ratings-list.css">
+  </head>
+  <body>
+    <header id="main-header" role="banner">
+      <div id="header-top" class="wrapper">
+        <div id="logo">
+          <h2><a href="http://www.byu.edu/" class="byu">Brigham Young University</a></h2>
+        </div>
+        <!-- This should link to your organization's home page-->
+        <h1><a id="site-name" href="#" title="Change this link to your organization's home page">Student Ratings of the Learning Experience</a></h1>
+      </div>
+    </header>
+    <div id="content" role="main" class="wrapper clearfix ">
+      <h1> </h1>
+      <div id="dynamic" name="dynamic">
+        <p class="instructions">Student ratings are an important part of evaluation and improvement at BYU.  Results are used for faculty and course development and to evaluate faculty for promotion and continuing status.  Your thoughtful and candid feedback is appreciated.</p>
+        <ul class="instructions">
+          <li>Your responses will be confidential unless you identify yourself in the &quot;Comments&quot; section. <b>You do not need to include your name in your comments to receive credit.</b></li>
+          <li><b>If you need to receive credit, </b>check the &quot;Report Completion to Instructor&quot; box next to the course and <b>only your name</b> without your responses will be reported to the instructor.</li>
+          <li>Your instructors will receive your responses anonymously <i>after</i> they have submitted grades.</li>
+        </ul>
+        <table class="listing">
+          <thead>
+            <tr>
+              <th class="course">Course / Instructor(s)</th>
+              <th class="period">Rating Period</th>
+              <th class="status">Status</th>
+              <th class="report">
+                 
+                Report Completion to Instructor<span class="star">*</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="course">
+                <div>CE EN 304-002: Metals, Woods, &amp; Composites</div>
+                <div>Perry, Ernest C</div>
+              </td>
+              <td class="period">Thursday, February 12<br>through<br>Monday, March 2</td>
+              <td class="status">
+                <input type="button" value="Rate" onclick="javascript:RatePilot('F651E483-0DCA-406C-A901-52E1EB28F314');">
+              </td>
+              <td class="report">
+                <input type="checkbox" onclick="javascript:NotifyPilot('ReportOff', '001EA2D5-3577-F63E-71DF-12877E1E235A');" checked="checked" disabled="">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><span class="star">* </span>This option appears AFTER the ratings are completed. If it is checked, your instructor can see that you have completed the ratings once 5 or more class members have rated the course.  The instructor will <b>NOT</b> see your responses.</p>
+        <p>Please email comments, questions, or suggestions to StudentRatings@byu.edu</p>
+      </div>
+    </div>
+    <div class="nav-container">
+      <!-- Primary Nav-->
+      <nav id="primary-nav" role="navigation">
+        <ul>
+          <li> <a href="#" class="single current">Home</a></li>
+          <li> <a href="#" class="single">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
