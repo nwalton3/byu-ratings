@@ -63,6 +63,7 @@
 	margin: 2.5em 0 4em
 	list-style: none
 	border-top: 1px solid #ddd
+
 	&:before
 		content: counter(question-counter)
 		counter-increment: question-counter
@@ -79,6 +80,11 @@
 		font-size: 0.9em
 		font-weight: bold
 		text-shadow: 0 0 10px rgba($blue0, 0.5)
+
+	&:after // Clearfix
+		content: ""
+		display: table
+		clear: both
 
 	.prompt
 		color: black
@@ -102,25 +108,38 @@
 			padding: 0.5em 1em
 			text-align: center
 			border-radius: 1.1em
-			background-color: $blue10
+			background-color: $blue8
 			z-index: 2
-			transition: all 200ms ease
-			+background( linear-gradient( $blue10, mix($blue7, $blue8) ) )
+			line-height: 1
+			background-size: 1px 10em
+			background-position: 0 -2em
+			transition: all 150ms ease
+			box-shadow: inset 0 -1em 1.5em -1em rgba($blue6, 1)
+
 			&:hover
-				+background( linear-gradient( $blue11, $blue9 ) )
+				background-color: $blue9
+				box-shadow: inset 0 -1em 1.5em -1em rgba($blue7, 1)
 
 		input:checked + label
-			+background( linear-gradient( $blue4, $blue2 ) )
+			background-color: $blue3
+			box-shadow: inset 0 1em 1.5em -1em rgba($blue0, 1)
+			border-color: $blue0
 			color: white
 
 	.feedback
 		textarea
 			width: 100%
 			resize: vertical
+			padding: 0.5em
 
 
 
 @media (min-width: $med-width)
+
+	.question
+		&:before
+			margin-left: -3em
+			top: 2.1em
 
 	.questions h2 .marker
 		margin: 0 -0.5em 1em
@@ -134,7 +153,6 @@
 
 	.question
 		clear: both
-		border-bottom: 1px solid #fff
 		.options
 			width: 45%
 			float: left

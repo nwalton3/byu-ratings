@@ -6,7 +6,7 @@ extends _layout
 //-	===============
 
 mixin answers(questionNumber, options)
-	- var optionList = [ ['Very Successful', 'Successful', 'Moderately Successful', 'Not Very Successful', 'Not at All Successful'], ['Very Effective', 'Effective', 'Moderately Effective', 'Not Very Effective', 'Not at All Effective'], ['Enhanced', 'Moderately Enhanced', '￼Slightly Enhanced', '￼No Effect', 'Detracted'] ];
+	- var optionList = [ ['Very Successful', 'Successful', 'Moderately Successful', 'Not Very Successful', 'Not at All Successful'], ['Very Effective', 'Effective', 'Moderately Effective', 'Not Very Effective', 'Not at All Effective'], ['Enhanced', 'Moderately Enhanced', 'Slightly Enhanced', 'No Effect', 'Detracted'], ['0 hours', '1–5 hours', '6–10 hours', '11–15 hours', '16+ hours'] ];
 
 	div.options
 		div.option
@@ -26,7 +26,7 @@ mixin answers(questionNumber, options)
 			label(for="q"+ questionNumber + "-rating-1") #{ optionList[options][4] }
 						
 	div.feedback
-		textarea(placeholder="Please let us know why...", id="q" + questionNumber + "-prompt", rows="10")
+		textarea(placeholder="Comments highly encouraged", id="q" + questionNumber + "-prompt", rows="10")
 
 
 //-	===============
@@ -137,6 +137,8 @@ block content
 
 			li.question
 				div.prompt For this course, about how many hours per week did you spend out of class (doing assignments, readings, etc.)?
+				+answers(13, 3)
+
 
 //- Remove stuff
 block breadcrumb
@@ -144,4 +146,3 @@ block search-menu
 block sign-in
 
 block footer
-	p Brigham Young University
