@@ -96,7 +96,7 @@ body strong, body dt { font-weight: 600; }
 
 .quote {border-top: 2px solid #ddd; border-bottom: 2px solid #ddd; margin: 24px 0 0; padding-bottom: 30px;}
 .quote .container {padding: 0 0 0 48px; position: relative;}
-.quote .container:before {content: '“'; height: 48px; position: absolute;top: 28px;left: -10px;font-size: 96px;color: #ccc;}
+.quote .container:before {content: "\201C"; height: 48px; position: absolute;top: 28px;left: -10px;font-size: 96px;color: #ccc;}
 
 .link-list {width: 50%; float: left;}
 .link-list ul {list-style: none; margin: 0;}
