@@ -1,0 +1,537 @@
+/* Base.css
+* The lowest common demoninator style definitions which all browsers will load. No CSS3.
+*/
+/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+[hidden] { display: none; }
+
+/* ========================================================================== Base ========================================================================== */
+/** 1. Prevent system color scheme's background color being used in Firefox, IE, and Opera. 2. Prevent system color scheme's text color being used in Firefox, IE, and Opera. 3. Set default font family to sans-serif. 4. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { background: #fff; /* 1 */ color: #000; /* 2 */ font-family: sans-serif; /* 3 */ -ms-text-size-adjust: 100%; /* 4 */ -webkit-text-size-adjust: 100%; /* 4 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
+
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* HTML5 Boilerplate  What follows is the result of much research on cross-browser styling. Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. */
+/* ========================================================================== Base styles: opinionated defaults ========================================================================== */
+html, button, input, select, textarea { color: #222; }
+
+body { font-size: 1em; line-height: 1.4; }
+
+/* Remove text-shadow in selection highlight: h5bp.com/i These selection rule sets have to be separate. Customize the background color to match your design. */
+::-moz-selection { background: #b3d4fc; text-shadow: none; }
+
+::selection { background: #b3d4fc; text-shadow: none; }
+
+/* A better looking default horizontal rule */
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+img { vertical-align: middle; }
+
+/* Remove default fieldset styles. */
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Allow only vertical resizing of textareas. */
+textarea { resize: vertical; }
+
+/* ========================================================================== Chrome Frame prompt ========================================================================== */
+.chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; }
+
+/* ========================================================================== Author's custom styles ========================================================================== */
+/* ========================================================================== Helper classes ========================================================================== */
+/* Image replacement */
+.ir { background-color: transparent; border: 0; overflow: hidden; /* IE 6/7 fallback */ *text-indent: -9999px; }
+
+.ir:before { content: ""; display: block; width: 0; height: 150%; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Clearfix: contain floats  For modern browsers 1. The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document. Otherwise it causes space to appear at the top and bottom of elements that receive the `clearfix` class. 2. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements. */
+.clearfix:before, .clearfix:after { content: " "; /* 1 */ display: table; /* 2 */ }
+
+.clearfix:after { clear: both; }
+
+/* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
+.clearfix { *zoom: 1; }
+
+/*** Base tags ***/
+html, body { width: 100%; overflow-x: hidden; }
+
+h1 { font-size: 2em; margin: 20px 0 10px; line-height: 1.1; }
+
+a { -webkit-transition: background 0.1s ease; transition: background 0.1s ease; }
+
+/** Positioning **/
+#main-header, #search-menu, #content, #page-footer, .nav-container { position: relative; }
+
+/*** Header ***/
+#main-header { background-color: #036; border-bottom: 1px solid #036; }
+
+#header-top { position: relative; }
+#header-top h1 { font-size: 2.2em; margin: 0 5% .25em; }
+#header-top h1 a { color: #fff; }
+#header-top a.sign-in { position: absolute; top: .35em; right: 5%; }
+
+#logo, #byu-bar { padding: .35em 0 .45em; }
+#logo a.byu, #logo a.byulink, #byu-bar a.byu, #byu-bar a.byulink { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; display: inline-block; height: 26px; width: 70px; background: transparent url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.png") 0px 0px no-repeat; }
+.svg #logo a.byu, .svg #logo a.byulink, .svg #byu-bar a.byu, .svg #byu-bar a.byulink { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.svg"); }
+#logo a.parentlink, #byu-bar a.parentlink { text-transform: uppercase; font-size: 14px; display: inline-block; padding: 6px 3px 2px; color: #e0edf9; line-height: 1.2; letter-spacing: 2px; vertical-align: top; }
+#logo h2, #byu-bar h2 { margin: 0; margin-right: 100px; line-height: 26px; }
+#logo a, #byu-bar a { display: block; }
+
+a.mybyu, a.sign-in, .open #search-button, #search-submit, .search-submit, .gcse-wrapper input.gsc-search-button { background-color: #628cb6; border: none; color: #fff; font-weight: bold; padding: 5px 18px; text-decoration: none; border-radius: 14px; }
+a.mybyu:hover, a.mybyu:active, a.sign-in:hover, a.sign-in:active, .open #search-button:hover, .open #search-button:active, #search-submit:hover, #search-submit:active, .search-submit:hover, .search-submit:active, .gcse-wrapper input.gsc-search-button:hover, .gcse-wrapper input.gsc-search-button:active { margin: -2px; background-color: #369; border: 2px solid #abc8e4; cursor: pointer; border-radius: 16px; }
+
+.menu-button { display: none; }
+
+/*** Search ***/
+/* Search box styling for mobile */
+#search-menu { width: 100%; position: relative; display: block; background-color: #001948; border-top: 1px solid #147; border-bottom: 1px solid #147; height: 36px; padding-top: 1px; padding-bottom: 4px; }
+
+#search-container textarea:hover, #search-container input:hover, #search-container textarea:active, #search-container input:active, #search-container textarea:focus, #search-container input:focus { outline: 0px !important; -webkit-appearance: none; }
+#search-container #basic-search { position: relative; padding-right: 77px; padding-left: 5px; }
+#search-container #basic-search label { color: #fff; }
+#search-container #search-submit { background-image: url(../img/search_box_icon.png); background-position: 50% 50%; background-repeat: no-repeat; overflow: hidden; text-indent: -1000px; padding: 5px; display: block; width: 50px; position: absolute; top: 0px; right: 5px; }
+#search-container #search-submit:hover, #search-container #search-submit:active { right: 7px; }
+#search-container #basic-search #search, #search-container input.gsc-input { margin-bottom: 0; vertical-align: top; border-radius: 15px; padding: 5px 10px !important; border: 0 !important; font-size: 13px; display: block; width: 100%; }
+
+/*** Navigation ***/
+.nav-container a { font-size: 14px; padding: .5em 0; display: block; font-weight: bold; padding-left: 5%; padding-right: 5%; }
+.nav-container a:hover, .nav-container a:active { background-color: #eeebe9; color: #001948; }
+.nav-container .mega a, .nav-container .sub a, .nav-container .sublinks a { font-weight: normal; padding-left: 10%; }
+.nav-container .featured, .nav-container .highlight { display: none; }
+.nav-container .sublinks { list-style: none; font-size: 13px; }
+.nav-container .sublinks a { padding-left: 15%; }
+
+#primary-nav, #secondary-nav { border-top: 1px solid #ddd; padding: 10px 0; }
+
+
+@charset "UTF-8";
+/* Responsive CSS
+* This is not only for layouts, but also any additional features such as CSS3 for any elements already declared in base.css
+*/
+/*!
+	Twitter Bootstrap (Scss version)
+*/
+/*	
+	Loaded first, so it can be overrridden easily.
+	Only uncomment the stuff that you really need */
+p { margin: 0 0 10px; }
+
+.lead { margin-bottom: 20px; font-size: 22.5px; font-weight: 200; line-height: 30px; }
+
+small { font-size: 85%; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+cite { font-style: normal; }
+
+.muted { color: #999; }
+
+a.muted:hover, a.muted:focus { color: gray; }
+
+.text-warning { color: #c09853; }
+
+a.text-warning:hover, a.text-warning:focus { color: #a47e3c; }
+
+.text-error { color: #b94a48; }
+
+a.text-error:hover, a.text-error:focus { color: #953b39; }
+
+.text-info { color: #3a87ad; }
+
+a.text-info:hover, a.text-info:focus { color: #2d6987; }
+
+.text-success { color: #468847; }
+
+a.text-success:hover, a.text-success:focus { color: #356635; }
+
+.text-left { text-align: left; }
+
+.text-right { text-align: right; }
+
+.text-center { text-align: center; }
+
+h1, h2, h3, h4, h5, h6 { margin: 10px 0; font-family: inherit; font-weight: bold; line-height: 20px; color: inherit; text-rendering: optimizeLegibility; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-weight: normal; line-height: 1; color: #999; }
+
+h1, h2, h3 { line-height: 40px; }
+
+h1 { font-size: 41.25px; }
+
+/*!
+
+* Header & Footer
+*
+*/
+#logo { padding-left: 3%; }
+#logo h2 { margin-left: -9px; }
+
+a.mybyu, a.sign-in, .open #search-button { -webkit-transition: background-color 0.3s; transition: background-color 0.3s; }
+
+#header-top a.sign-in { right: 3%; background: #4a79a7; background: -webkit-linear-gradient(top, #628cb6, #369); background: -webkit-gradient(linear, left top, left bottom, from(#628cb6), to(#336699)); background: -webkit-linear-gradient(top, #628cb6, #336699); background: linear-gradient(to bottom, #628cb6, #336699); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2); }
+#header-top a.sign-in:hover { border: none; margin: 0; background: #366797; background: -webkit-linear-gradient(top, #4a79a7, #225588); background: -webkit-gradient(linear, left top, left bottom, from(#4a79a7), to(#225588)); background: linear-gradient(to bottom, #4a79a7, #225588); }
+
+#site-name { text-shadow: 0 0 12px rgba(0, 25, 72, 0.5); }
+
+.parentlink { text-shadow: 0 0 6px rgba(0, 25, 72, 0.65); }
+
+#site-name:hover, .parentlink:hover { text-decoration: none; text-shadow: 0 0 20px #001948; }
+
+#logo a.parentlink:hover { color: #fff; }
+
+#page-footer { -webkit-box-shadow: 0 -1px 0px #dddddd; box-shadow: 0 -1px 0px #dddddd; border-top: 1px solid #fff; }
+
+@media all and (min-width: 32em) { #logo a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.png"); width: 350px; }
+  .svg #logo a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.svg"); } }
+/* Medium width */
+@media all and (min-width: 37.5em) { #main-header { background: #036 url("//home.byu.edu/home/sites/default/files/global/img/byu-header-bg.png") top left no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%; }
+  .svg #main-header { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-header-bg.svg"); }
+  #header-top h1 { margin: .25em 4% .4em; }
+  #logo { background-color: transparent; padding-bottom: 0; border: none; }
+  .parentlink { letter-spacing: 1px; } }
+
+* Navigation
+*
+*/
+html { overflow-x: hidden; overflow-y: scroll; }
+
+/* Side slider navigation */
+body { -webkit-transition: left, height 0.2s ease; transition: left, height 0.2s ease; position: relative; left: 0; overflow: hidden; }
+
+#content { background-color: white; }
+
+#main-header, #content, #page-footer, #search-menu { z-index: 2; left: 0%; -webkit-transition: left 0.2s ease; transition: left 0.2s ease; }
+
+body.sideNav { min-height: 1600px; }
+body.sideNav #main-header, body.sideNav #search-menu, body.sideNav #content, body.sideNav #page-footer { left: 75%; }
+
+.nav-container { min-height: 100%; position: absolute; left: 0; top: 0; width: 75%; z-index: 1; background-color: #025; }
+.nav-container a:active { background-color: transparent; }
+.nav-container:after { content: " "; display: block; width: 15px; height: 100%; position: absolute; top: 0; right: 0; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMTk0OCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iIzAwMTk0OCIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDE5NDgiIHN0b3Atb3BhY2l0eT0iMC42NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); -webkit-background-size: 100%; background-size: 100%; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 25, 72, 0)), color-stop(25%, rgba(0, 25, 72, 0.1)), color-stop(100%, rgba(0, 25, 72, 0.65))); background-image: -webkit-linear-gradient(left, rgba(0, 25, 72, 0), rgba(0, 25, 72, 0.1) 25%, rgba(0, 25, 72, 0.65)); background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 25, 72, 0)), color-stop(25%, rgba(0, 25, 72, 0.1)), to(rgba(0, 25, 72, 0.65))); background-image: linear-gradient(to right, rgba(0, 25, 72, 0), rgba(0, 25, 72, 0.1) 25%, rgba(0, 25, 72, 0.65)); }
+
+/* Reset from base */
+#primary-nav, #secondary-nav { border-top: none; padding: 0; }
+
+/* Menu button */
+.menu-button { position: absolute; top: 0; left: 0; text-indent: -9999em; border-right: 1px solid #147; width: 60px; height: 45px; display: block; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMjI1NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMTk0OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); -webkit-background-size: 100%; background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #002255), color-stop(100%, #001948)); background-image: -webkit-linear-gradient(#002255, #001948); background-image: -webkit-gradient(linear, left top, left bottom, from(#002255), to(#001948)); background-image: linear-gradient(#002255, #001948); }
+.menu-button:hover { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzNjY5OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzExNDQ3NyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); -webkit-background-size: 100%; background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #336699), color-stop(100%, #114477)); background-image: -webkit-linear-gradient(#336699, #114477); background-image: -webkit-gradient(linear, left top, left bottom, from(#336699), to(#114477)); background-image: linear-gradient(#336699, #114477); }
+.menu-button:hover:before { color: white; }
+.menu-button:before { content: "\f0c9"; font-family: "FontAwesome"; position: absolute; width: 100%; text-align: center; top: 12px; display: block; text-indent: 0; font-size: 25px; color: #d1e4f6; }
+
+/* Side Navigation */
+#primary-nav, #secondary-nav { font-size: 1.2em; }
+#primary-nav a, #secondary-nav a { color: #e0edf9; padding: 1em 5%; display: block; text-shadow: 0px -1px 0px #000; }
+#primary-nav a:hover, #secondary-nav a:hover { text-decoration: none; background-color: transparent; color: #fff; }
+#primary-nav > ul, #secondary-nav > ul { padding: 0; background: #036; border-right: 1px solid #147; }
+#primary-nav li, #secondary-nav li { display: block; float: none; padding: 0; border-bottom: 1px solid #025; border-top: 1px solid #147; overflow: hidden; }
+#primary-nav li.left, #secondary-nav li.left, #primary-nav li.right, #secondary-nav li.right { padding: 0; }
+#primary-nav li.hover, #secondary-nav li.hover { background-color: #001948; }
+
+#primary-nav .mega, #primary-nav .sub, #secondary-nav .sub { background-color: #025; margin: 0; max-height: 0px; position: relative; -webkit-transition: max-height 0.2s ease; transition: max-height 0.2s ease; }
+#primary-nav .mega a, #primary-nav .sub a, #secondary-nav .sub a { padding-left: 1.75em; border-top: 1px solid #036; border-bottom: 1px solid #001948; padding: .4em 10%; padding-right: 5%; color: #e0edf9; }
+#primary-nav .mega a:hover, #primary-nav .sub a:hover, #secondary-nav .sub a:hover { color: #fff; }
+#primary-nav .mega .sublinks a, #primary-nav .sub .sublinks a, #secondary-nav .sub .sublinks a { padding-left: 15%; }
+#primary-nav .mega ul, #primary-nav .sub ul, #secondary-nav .sub ul { padding: 0; margin: 0; }
+#primary-nav .mega li, #primary-nav .sub li, #secondary-nav .sub li { border: none; }
+
+#primary-nav li.hover .mega, #primary-nav li.hover .sub, #secondary-nav li.hover .sub { max-height: 1500px; }
+
+/* Primary Nav */
+#primary-nav { margin-top: 1em; }
+#primary-nav .highlight, #primary-nav .featured, #primary-nav hr { display: none; }
+#primary-nav a.current, #primary-nav a:hover { color: #fff; background-color: #036; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzNjY5OSIvPjxzdG9wIG9mZnNldD0iMXB4IiBzdG9wLWNvbG9yPSIjMDAzMzY2Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAyMjU1Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'); -webkit-background-size: 100%; background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #336699), color-stop(1px, #003366), color-stop(100%, #002255)); background-image: -webkit-linear-gradient(#336699, #003366 1px, #002255); background-image: -webkit-gradient(linear, left top, left bottom, from(#336699), color-stop(1px, #003366), to(#002255)); background-image: linear-gradient(#336699, #003366 1px, #002255); }
+#primary-nav .mega a:hover { background-color: #025; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzNjY5OSIvPjxzdG9wIG9mZnNldD0iMXB4IiBzdG9wLWNvbG9yPSIjMDAyMjU1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAxOTQ4Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'); -webkit-background-size: 100%; background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #336699), color-stop(1px, #002255), color-stop(100%, #001948)); background-image: -webkit-linear-gradient(#336699, #002255 1px, #001948); background-image: -webkit-gradient(linear, left top, left bottom, from(#336699), color-stop(1px, #002255), to(#001948)); background-image: linear-gradient(#336699, #002255 1px, #001948); }
+
+/* Secondary Nav */
+#secondary-nav > ul { background-color: #369; }
+#secondary-nav a:hover { background-color: #147; }
+#secondary-nav ul { padding: 0; }
+#secondary-nav li { border-top-color: #628cb6; border-bottom-color: #147; }
+
+
+/*** Medium width ***/
+@media all and (min-width: 16em) { .menu-button { width: auto; height: auto; text-align: left; text-indent: 0; border-right: 0; background-image: none; color: #abc8e4; font-weight: bold; font-size: 15px; padding: 9px 5% 12px 3%; }
+  .menu-button:link, .menu-button:visited { color: #abc8e4; }
+  .menu-button:hover, .menu-button:active { color: white; text-decoration: none; }
+  .menu-button:before { display: inline-block; position: relative; width: 24px; font-weight: normal; top: 3px; margin-right: 9px; }
+  #content.sidebar-navigation nav.sidebar { margin: 4em -11% -4em; }
+  #content.sidebar-navigation nav.sidebar a { padding-left: 9%; padding-right: 9%; }
+  #primary-nav .mega .sublinks a, #primary-nav .sub .sublinks a, #secondary-nav .sub .sublinks a { padding-left: 12.5%; } }
+/*!
+
+*
+* Full menu width 
+*
+* YOU CAN MAKE ADJUSTMENTS HERE BASED ON YOUR SITE'S MENU
+*
+* This media query should be set to the width where the primary menu will fit 
+* in the top bar without wrapping. Make sure to test in lots of browsers,
+* and some buffer to account for differences in rendering. NOTE: If you use
+* a width smaller than 45em, some other parts of the header may need to be
+* adjusted--especially the BYU logo (it will run into the sign in button).
+*
+*/
+/* 
+* NOTE: The full-menu-width variable is found in _variables.scss
+*/
+@media all and (min-width: 16em) { #main-header { -webkit-background-size: 100% 96px; background-size: 100% 96px; }
+  body.sideNav { min-height: 0; }
+  body.sideNav #main-header, body.sideNav #content, body.sideNav #page-footer, body.sideNav #search-menu { left: auto; }
+  #header-top { height: 96px; margin-right: 3%; margin-bottom: 36px; }
+  #header-top a.sign-in { right: 262px; }
+  #search-menu { width: 250px; margin: 0; padding: 0; position: absolute; top: .35em; left: auto; right: 3%; background-color: transparent; z-index: 10; overflow: visible; }
+  #search-menu .menu-button { display: none; color: #001948; }
+  .nav-container { width: 100%; display: block; top: 96px; min-height: 36px; z-index: 5; background-color: #001948; border-top: 1px solid #147; border-bottom: 1px solid #369; -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
+  .nav-container:after { display: none; }
+  #primary-nav, #secondary-nav { font-size: 1em; }
+  #primary-nav > ul, #secondary-nav > ul { border-right: 0; background: transparent; }
+  #primary-nav > ul > li, #secondary-nav > ul > li { float: left; }
+  #primary-nav li, #secondary-nav li { border-top: 0px solid transparent; border-bottom: 0px solid transparent; }
+  #primary-nav li.hover, #secondary-nav li.hover { overflow: visible; }
+  #primary-nav li.hover > a, #secondary-nav li.hover > a { border-radius: 3px 3px 0 0; position: relative; z-index: 2; -webkit-box-shadow: 0px 3px 0px #fff; box-shadow: 0px 3px 0px #fff; }
+  #primary-nav li.hover a, #secondary-nav li.hover a { background: #fff; color: #001948; text-shadow: none; -webkit-transition: background-color, ease 0.05s; transition: background-color, ease 0.05s; }
+  #primary-nav li.hover ul a:hover, #secondary-nav li.hover ul a:hover { background: #d1e4f6; color: #001948; }
+  #primary-nav a, #secondary-nav a { padding: .6em 1.2em; }
+  #primary-nav .mega, #secondary-nav .sub { background-color: #fff; border-bottom: 2px solid #036; display: none; font-size: 13px; left: 0; position: absolute; padding: .5em 0 1em; width: 15em; z-index: 1; border-radius: 3px; -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5); box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5); }
+  #primary-nav .mega a, #secondary-nav .sub a { display: block; border: 0; padding: .4em 1.5em; }
+  #primary-nav { padding-left: 2%; margin-top: 0; }
+  #primary-nav > ul { margin: 0 auto; position: relative; }
+  #primary-nav .mega { min-height: 400px; position: absolute; padding: 1em 0 2em; width: 97.95%; border-radius: 0 0 3px 3px; }
+  #primary-nav .mega a { border-radius: 3px; }
+  #primary-nav .sub { background-color: #fff; border-bottom: 3px solid #369; -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.7); box-shadow: 0 1px 8px rgba(0, 0, 0, 0.7); display: none; margin-top: 0; padding: 10px; position: absolute; width: 222px; }
+  #primary-nav .sub li { margin-left: -10px; margin-right: -10px; }
+  #primary-nav .sub a { border: none; }
+  #primary-nav .sub .links { width: 100%; }
+  #primary-nav li.hover .mega, #primary-nav li.hover .sub, #primary-nav .highlight, #primary-nav .featured, #primary-nav hr { display: block; }
+  #primary-nav hr { border: none; border-top: 1px solid #ddd; }
+  #primary-nav .mega li.featured { margin-bottom: 1em; padding-top: .5em; padding-bottom: 1em; border-bottom: 1px solid #ddd; }
+  #primary-nav .mega li.featured a { font-weight: bold; }
+  #primary-nav .mega .links { float: left; width: 34%; margin-left: 3%; margin-right: 3%; }
+  #primary-nav .mega .links.double { width: 44%; margin-right: 0; }
+  #primary-nav .mega .links.double .featured .sublinks { padding-left: 5%; }
+  #primary-nav .mega .links.double .left { float: left; width: 50%; }
+  #primary-nav .mega .links .sublinks { padding: 0 25px 0 .25em; }
+  #primary-nav .mega .links .sublinks a { padding-left: 1.5em; }
+  #primary-nav .mega .links .sublinks li a:before { font-family: 'fontawesome'; content: '\f105'; padding-right: 8px; list-style-type: none; color: #ddd; }
+  #primary-nav .mega .links .sublinks li a:hover:before { color: #fff; }
+  #primary-nav .highlight { float: left; padding-left: 2%; width: 24%; }
+  #primary-nav .highlight img { margin-bottom: 15px; }
+  #primary-nav .highlight a { padding: 0; color: #036; }
+  #primary-nav .highlight a:hover { background-color: transparent; background-image: none; color: #001948; text-decoration: underline; }
+  #secondary-nav { position: absolute; top: -41px; right: 9px; }
+  #secondary-nav li.hover .sub { display: block; position: absolute; left: auto; }
+  #secondary-nav a { display: inline-block; color: #d1e4f6; }
+  #secondary-nav a:hover { background: transparent; color: #fff; }
+  #content.sidebar-navigation { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QxZTRmNiIvPjxzdG9wIG9mZnNldD0iOTkuNTQ1NDUlIiBzdG9wLWNvbG9yPSIjZDFlNGY2Ii8+PHN0b3Agb2Zmc2V0PSI5OS41NDU0NSUiIHN0b3AtY29sb3I9IiNhYmM4ZTQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhYmM4ZTQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'); -webkit-background-size: 100%; background-size: 100%; background-image: -webkit-linear-gradient(0deg, #d1e4f6 0px, #d1e4f6 219px, #abc8e4 219px, #abc8e4 220px, rgba(0, 0, 0, 0) 220px); background-image: linear-gradient(90deg, #d1e4f6 0px, #d1e4f6 219px, #abc8e4 219px, #abc8e4 220px, rgba(0, 0, 0, 0) 220px); -webkit-background-size: 220px 100%; background-size: 220px 100%; background-repeat: no-repeat; padding-left: 280px; padding-right: 70px; }
+  #content.sidebar-navigation nav.sidebar { padding: 1.5em 0; width: 220px; position: absolute; background-color: transparent; top: 0; left: 0; margin: 0; border: none; }
+  #content.sidebar-navigation nav.sidebar a { padding: .3em 1em .4em 1.5em; }
+  #content.sidebar-navigation nav.sidebar .current a { background-color: white; border-color: #abc8e4; } }
+/*!
+* Content 
+*
+*/
+@media all and (min-width: 37.5em) { #content { padding: 1em 9% 4em; } }
+@media all and (min-width: 56.25em) { .one-sidebar #main-content, .one-sidebar .sidebar, .two-sidebars #main-content, .two-sidebars .sidebar { float: left; }
+  .one-sidebar #main-content { margin-right: 5%; width: 58.7%; }
+  .one-sidebar .sidebar { width: 36.3%; }
+  .two-sidebars #main-content { margin-right: 5%; margin-left: 5%; width: 48%; }
+  .two-sidebars .sidebar { width: 21%; margin: 0; } }
+@media screen and (min-width: 71.625) { body { background: url("../img/background-patterns/redox_01.png") top center repeat; color: #444; }
+  .wrapper { max-width: 58.7325; margin: 0 auto; }
+  #content { position: relative; min-height: 100%; width: 58.7325; padding-left: 6.44625; padding-right: 6.44625; -webkit-box-shadow: 0 0 30px 0px rgba(222, 222, 222, 0.7); box-shadow: 0 0 30px 0px rgba(222, 222, 222, 0.7); }
+  #content.sidebar-navigation { width: 720px; } }
+@media (min-width: 71.625) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) { /* Retina-specific stuff here */
+  body { background-image: url("../img/background-patterns/redox_01@2x.png"); -webkit-background-size: 600px 375px; background-size: 600px 375px; } }
+/*** Larger width ***/
+@media all and (min-width: 71.625) { #primary-nav { width: 1008px; margin: 0 auto; padding-left: 0; }
+  #primary-nav .mega { width: 100%; }
+  #primary-nav a, #secondary-nav a { padding-left: 12px; padding-right: 12px; }
+  #logo { padding-left: 12px; }
+  #header-top { max-width: 1008px; margin-right: auto; }
+  #search-menu, #secondary-nav { right: 50%; margin-right: -504px; } }
+/*** Responsive Modal Markup ***/
+@media (max-width: 767px) { .modal { position: fixed; top: 20px; left: 20px; right: 20px; width: auto; margin: 0; }
+  .modal.fade { top: -100px; }
+  .modal.fade.in { top: 20px; } }
+/*!
+h5bp print styles 
+*/
+/* Print styles from h5bp https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css */
+@media print { * { background: transparent !important; color: #000 !important; /* Black prints faster: h5bp.com/s */ -webkit-box-shadow: none !important; /* Black prints faster: h5bp.com/s */ box-shadow: none !important; text-shadow: none !important; }
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  /* Don't show links for images, or javascript/internal links */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; /* h5bp.com/t */ }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; } }
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) { /* Style adjustments for high resolution devices */ }
+
+/*# sourceMappingURL=responsive.css.map */
+
+
+body, button, input, select, textarea { color: #444; font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; -webkit-text-size-adjust: 100%; }
+
+h1 { font-size: 2em; margin: 20px 0 10px; line-height: 1.1; }
+
+a { -webkit-transition: background 0.1s ease; transition: background 0.1s ease; text-decoration: none;}
+
+/*** Small width ***/
+body, button, input, select, textarea, #search-container .gsc-control-cse, #search-container .gsc-control-cse .gsc-table-result { font-size: 0.875em; line-height: 1.3; font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 500; }
+
+#header-top h1 { font-family: "Palatino", "DroidSerif", "Droid Serif", Georgia, serif; font-weight: 300; }
+
+h1 { font-size: 2em; margin: 30px 0px 10px; }
+
+a.mybyu, a.sign-in, .open #search-button, #search-submit, .gcse-wrapper input.gsc-search-button, .nav-container a { font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 500; }
+
+.nav-container .mega a, .nav-container .sub a { font-weight: 500; }
+
+#primary-nav .mega li.featured a { font-weight: 600; }
+
+
+/*** Medium width ***/
+@media all and (min-width: 37.5em) { body, button, input, select, textarea { font-size: 0.9375em; } }
+ 
+ h1 { font-size: 2.2em; line-height: 40px; margin: 30px 0px 20px; }
+
+/*** Large width ***/
+@media all and (min-width: 56.25em) { body, button, input, select, textarea { font-size: 1em; } }
+/*** Larger width ***/
+/*** Extra large width ***/
+@media all and (min-width: 95em) { body, button, input, select, textarea { font-size: 16px; line-height: 22px; } }
+
+/*# sourceMappingURL=header.css.map */
+
+@media all and (max-width: 720px) {
+	#site-name span {
+		display: none;
+	}
+}
+
