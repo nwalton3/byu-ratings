@@ -15,6 +15,8 @@ class GraphBar
 	protected $mean; // The mean of the student responses
 	protected $confidence; // The confidence interval for those student responses
 
+	/* Static variables. Use these to set default values for all graphs in a page if needed. */
+
 	public static $minInput = 1;
 	public static $maxInput = 5;
 
@@ -22,7 +24,7 @@ class GraphBar
 	public static $maxGraphCoordinate = 370;
 
 
-	/* Foundation variables for building the graph */
+	/* Foundation variables for building the graph. Initiated by constructor. */
 
 	protected $maxN; // The highest possible number that can be scored on the ratings scale
 	protected $minN; // The lowest possible number that can be scored on the ratings scale
@@ -38,6 +40,9 @@ class GraphBar
 
 	/* Constructor */
 
+	// TODO: Maybe want to split out function for resetting the ones set by static variable, 
+	// so you can override it for specific instances if you want to. Could set it to use
+	// the static var if none provided.
 	public function __construct( $mean, $confidence )
 	{
 		$this->mean       = $mean;
