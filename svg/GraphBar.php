@@ -26,12 +26,12 @@ class GraphBar
 
 	/* Foundation variables for building the graph. Initiated by constructor. */
 
-	protected $minN; // The lowest possible number that can be scored on the ratings scale
-	protected $maxN; // The highest possible number that can be scored on the ratings scale
-	protected $numSpan; // The absolute number of steps between min and max on the ratings scale
+	protected $inputMin; // The lowest possible number that can be scored on the ratings scale
+	protected $inputMax; // The highest possible number that can be scored on the ratings scale
+	protected $inputSpan; // The absolute number of steps between min and max on the ratings scale
 
-	protected $graphStartX; // The horizontal start coordinate of the visual graph
-	protected $graphEndX;   // The horizontal end coordinate of the visual graph
+	protected $graphMin; // The horizontal start coordinate of the visual graph
+	protected $graphMax;   // The horizontal end coordinate of the visual graph
 	protected $graphWidth; // The absolute width of the graph
 
 	protected $graphFactor; // The multiplier that translates the scale to the graph coordinates
@@ -40,23 +40,13 @@ class GraphBar
 
 	/* Constructor */
 
-	// TODO: Maybe want to make method for setting the variables that are set here by static variable
-	// ($minN, $maxN, graphStartX, $graphEndX) so you can override them for specific instances if you want to. 
-	// Could set the function to use the static var if none provided, and call it from the constructor.
 	public function __construct( $mean, $confidence )
 	{
 		$this->mean       = $mean;
 		$this->confidence = $confidence;
 
-		$this->minN = self::$minInput;
-		$this->maxN = self::$maxInput;
-
-		$this->graphStartX = self::$minGraphCoordinate;
-		$this->graphEndX   = self::$maxGraphCoordinate;
-
-		$this->numSpan = $this->maxN - $this->minN;
-		$this->graphWidth = $this->graphEndX - $this->graphStartX;
-		$this->graphFactor = $this->graphWidth / $this->numSpan;
+		$this->setInputRange ( self::$minInput, self::$maxInput );
+		$this->setGraphBoundaries ( self::$minGraphCoordinate, self::$maxGraphCoordinate );
 	}
 
 
@@ -74,8 +64,8 @@ class GraphBar
 		$high = $this->mean + $conf;
 
 		// Check for accuracy
-		if ( $low  < $this->minN ) { $low  = $this->minN; }
-		if ( $high > $this->maxN ) { $high = $this->maxN; }
+		if ( $low  < $this->inputMin ) { $low  = $this->inputMin; }
+		if ( $high > $this->inputMax ) { $high = $this->inputMax; }
 
 
 		// Translate those numbers into coordinates on the graph
@@ -93,17 +83,66 @@ class GraphBar
 	}
 
 
+	/* Func: setInputRange
+	 * Desc: Set the minimum and maximum number input to display on the graph
+	 * Args: $min - The lowest number allowed in the graph bar
+	 *		 $max - The highest number allowed
+	 */
+	public function setInputRange( $min, $max )
+	{
+		$this->inputMin = $min;
+		$this->inputMax = $max;
+		$this->inputSpan = $max - $min;
+		$this->graphFactor = $this->graphWidth / $this->inputSpan;
+	}
+
+
+	/* Func: getInputRange
+	 * Desc: Get the min and max number inputs that will be displayed on the graph
+	 * Args: none
+	 */
+	public function getInputRange()
+	{
+		return [ 'min' => $this->inputMin, 'max' => $this->inputMax = $this->inputMax ];
+	}
+
+
+	/* Func: setGraphBoundaries
+	 * Desc: Set the minimum and maximum x coordinates of the graph
+	 * Args: $min - The left-most x coordinate in the visual graph
+	 *		 $max - The right-most x coordinate in the visual graph
+	 */
+	public function setGraphBoundaries( $min, $max )
+	{
+		$this->graphMin = $min;
+		$this->graphMax = $max;
+		$this->graphWidth = $max - $min;
+		$this->graphFactor = $this->graphWidth / $this->inputSpan;
+	}
+
+
+	/* Func: getGraphBoundaries
+	 * Desc: Get the left and right borders of the graph, based on the SVG coordinate system
+	 * Args: none
+	 */
+	public function getGraphBoundaries()
+	{
+		return [ 'min' => $this->graphMin, 'max' => $this->graphMax ];
+	}
+
+
 	/* Func: translateCoordinates
 	 * Desc: Translate the raw numbers in to lines on the coordinate system
 	 * Args: $n - The raw number calculated from the survey data (based on a 1-5 scale)
 	 */
-	protected function translateCoordinates( $n )
+	public function translateCoordinates( $n )
 	{
 		// Make the numbering start at zero
-		$num = $n - $this->minN;
+		$num = $n - $this->inputMin;
 
 		// Translate the number to a coordinate in the SVG graphic
-		return $this->graphStartX + ( $num * $this->graphFactor );
+		return $this->graphMin + ( $num * $this->graphFactor );
 	}
 
 }
+

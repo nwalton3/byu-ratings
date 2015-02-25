@@ -1,15 +1,6 @@
 <?php
 
 
-/* Start the document */
-
-	header("Content-type:image/svg+xml");
-	echo '<?xml version="1.0" encoding="utf-8" ?>';
-
-
-
-
-
 /* Get class for building the graph bars */
 
 	require_once('GraphBar.php');
@@ -20,24 +11,21 @@
 	// GraphBar::$maxGraphCoordinate = 370;
 
 
-
-
-
 /* Functions */
 	
 	/* Func: check_input
 	 * Desc: Check whether a variable is in the GET parameters and return it or a default value if not available.
 	 * Args: $var - String - The $_GET variable to check.
-	 *		 $default - A value to return if the specified variable is not available. If not set, defaults to null.
 	 *		 $location - String - The location of the variables array. Can take 'GET', 'POST', or 'SESSION'. Defaults to 'GET'.
+	 *		 $default - A value to return if the specified variable is not available. If not set, defaults to null.
 	 */
-	function check_input( $var, $default = null, $location = 'GET' )
+	function check_input( $var, $location = 'GET', $default = null )
 	{
-		$loc = $_GET; // default
-		if ( $location === 'POST' )    { $loc = $_GET; }
+		$loc = $_GET; // Default location setting is GET
+		if ( $location === 'POST' )    { $loc = $_POST; }
 		if ( $location === 'SESSION' ) { $loc = $_SESSION; }
 
-		return isset( $loc[$var] ) ? $loc[$var] : $default;
+		return isset( $loc[$var] ) ? $loc[$var] : $default; // Return the value if found, return the default if not
 	}
 
 
@@ -66,15 +54,18 @@
 	$universityMean       = check_input('um');
 	$universityConfidence = check_input('uc');
 
+	if ( check_input('minN') ) { GraphBar::$minInput = $_REQUEST['minN']; }
+	if ( check_input('maxN') ) { GraphBar::$maxInput = $_REQUEST['maxN']; }
 
-
+	if ( check_input('minG') ) { GraphBar::$minGraphCoordinate = $_REQUEST['minG']; }
+	if ( check_input('maxG') ) { GraphBar::$maxGraphCoordinate = $_REQUEST['maxG']; }
 
 
 /* Outputs */
 
 	// Title
 		// SVG doesn't natively wrap text, so we have to insert <tspan> elements to get wrapping
-	$glue = '</tspan><tspan x="0" dy="9">'; // The code we'll need to wrap lines in SVG
+	$glue = '</tspan><tspan x="0" dy="8.5">'; // The code we'll need to wrap lines in SVG
 	$titleWrapped = wordwrap( $title, 30, $glue ); // Split the lines. This is the variable that gets inserted below in the SVG code.
 	$titleLines = explode( $glue, $titleWrapped ); // Use this to check the number of lines
 	$titleHover = null;
@@ -126,6 +117,15 @@
 		$university = false;
 	}
 
+
+
+
+/* Start the document */
+
+	header("Content-type:image/svg+xml");
+	echo '<?xml version="1.0" encoding="utf-8" ?>';
+
+	/* */
 ?>
 
 
@@ -133,7 +133,7 @@
 
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 422 30" enable-background="new 0 0 422 30" xml:space="preserve">
+	 viewBox="0 0 435 35" enable-background="new 0 0 430 35" xml:space="preserve">
 	
 	<style>
 
@@ -143,7 +143,7 @@
 			font-family: 'Source Sans Pro', 'Calibri', Helvetica, Arial,  sans-serif;
 		}
 		#Title {
-			font-size: 9px;
+			font-size: 8.5px;
 		}
 		.respondents {
 			font-size: 7px;
@@ -158,16 +158,28 @@
 
 
 	<g id="BG">
-		<?php if ( $section )    { ?><text class="legend" transform="matrix(1 0 0 1 380 6)"   fill="#BE2026">Section</text><?php } ?>
-		<?php if ( $department ) { ?><text class="legend" transform="matrix(1 0 0 1 380 13)" fill="#F1B71C">Department</text><?php } ?>
-		<?php if ( $college )    { ?><text class="legend" transform="matrix(1 0 0 1 380 20.5)" fill="#75C044">College</text><?php } ?>
-		<?php if ( $university ) { ?><text class="legend" transform="matrix(1 0 0 1 380 28)" fill="#1F4389">University</text><?php } ?>
+		<?php if ( $section )    { ?><text class="legend" transform="matrix(1 0 0 1 398 6)"   fill="#BE2026">Section</text><?php } ?>
+		<?php if ( $department ) { ?><text class="legend" transform="matrix(1 0 0 1 398 13)" fill="#F1B71C">Department</text><?php } ?>
+		<?php if ( $college )    { ?><text class="legend" transform="matrix(1 0 0 1 398 20.5)" fill="#75C044">College</text><?php } ?>
+		<?php if ( $university ) { ?><text class="legend" transform="matrix(1 0 0 1 398 28)" fill="#1F4389">University</text><?php } ?>
 		
-		<line fill="none" stroke="#888888" stroke-width="0.25" stroke-miterlimit="10" x1="130" y1="30" x2="130" y2="0"/>
-		<line fill="none" stroke="#888888" stroke-width="0.25" stroke-miterlimit="10" x1="190" y1="30" x2="190" y2="0"/>
-		<line fill="none" stroke="#888888" stroke-width="0.25" stroke-miterlimit="10" x1="250" y1="30" x2="250" y2="0"/>
-		<line fill="none" stroke="#888888" stroke-width="0.25" stroke-miterlimit="10" x1="310" y1="30" x2="310" y2="0"/>
-		<line fill="none" stroke="#888888" stroke-width="0.25" stroke-miterlimit="10" x1="370" y1="30" x2="370" y2="0"/>
+		<?php 
+			// Get the boundaries of the input and the graph
+			$input = $sectionObj->getInputRange();
+			$graph = $sectionObj->getGraphBoundaries();
+
+			// Add a vertical graph line for each whole number
+			for ( $i = $input['min']; $i <= $input['max']; $i++ ) {
+
+				$lineX = $sectionObj->translateCoordinates( $i ); ?>
+
+				<line fill="none" stroke="#888888" stroke-width="0.25" stroke-miterlimit="10" x1="<?php echo $lineX; ?>" y1="30" x2="<?php echo $lineX; ?>" y2="0"/> 
+
+				<?php 
+			}
+
+		?>
+
 	</g>
 
 
@@ -175,14 +187,14 @@
 
 	<g id="Heading">
 		<text id="Title" transform="matrix(1 0 0 1 2 8.0869)">
-			<?php echo $titleHover; ?>
+			<?php echo $titleHover; // There's no hover unless we truncate the title ?>
 
 			<tspan>
 				<?php echo $titleWrapped; ?>
 			</tspan>
 			
 			<?php if ( $numResponded && $classSize ) { ?>
-				<tspan class="respondents" x="0" dy="10" fill="#777777">
+				<tspan class="respondents" x="0" dy="9" fill="#777777">
 					<?php echo $numResponded; ?> / <?php echo $classSize; ?> responded
 				</tspan>
 			<?php } ?>
