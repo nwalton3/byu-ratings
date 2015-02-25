@@ -26,8 +26,8 @@ class GraphBar
 
 	/* Foundation variables for building the graph. Initiated by constructor. */
 
-	protected $maxN; // The highest possible number that can be scored on the ratings scale
 	protected $minN; // The lowest possible number that can be scored on the ratings scale
+	protected $maxN; // The highest possible number that can be scored on the ratings scale
 	protected $numSpan; // The absolute number of steps between min and max on the ratings scale
 
 	protected $graphStartX; // The horizontal start coordinate of the visual graph
@@ -40,9 +40,9 @@ class GraphBar
 
 	/* Constructor */
 
-	// TODO: Maybe want to split out function for resetting the ones set by static variable, 
-	// so you can override it for specific instances if you want to. Could set it to use
-	// the static var if none provided.
+	// TODO: Maybe want to make method for setting the variables that are set here by static variable
+	// ($minN, $maxN, graphStartX, $graphEndX) so you can override them for specific instances if you want to. 
+	// Could set the function to use the static var if none provided, and call it from the constructor.
 	public function __construct( $mean, $confidence )
 	{
 		$this->mean       = $mean;
@@ -69,14 +69,20 @@ class GraphBar
 	{
 
 		// Get the two ends of the graph bar by adding or subtracting the confidence interval
-		$low  = $this->mean - $this->confidence;
-		$high = $this->mean + $this->confidence;
+		$conf = abs( $this->confidence ); // Use absolute value so low isn't above high
+		$low  = $this->mean - $conf; 
+		$high = $this->mean + $conf;
+
+		// Check for accuracy
+		if ( $low  < $this->minN ) { $low  = $this->minN; }
+		if ( $high > $this->maxN ) { $high = $this->maxN; }
+
 
 		// Translate those numbers into coordinates on the graph
 		$begin  = $this->translateCoordinates( $low );
 		$end    = $this->translateCoordinates( $high );
 
-		// Return an array with the correct coordinates to be used in the SVG
+		// Return an array with the correct coordinates to be used in the SVG display
 		$array = [
 			'begin'  => $begin,
 			'end'    => $end,
