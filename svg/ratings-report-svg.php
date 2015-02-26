@@ -6,7 +6,7 @@
 	header("Content-type:image/svg+xml");
 	echo '<?xml version="1.0" encoding="utf-8" ?>';
 
-
+	$page = new PageRenderer();
 /* SVG code below */
 
 ?>
@@ -60,7 +60,7 @@
 
 		<?php 
 
-			add_divider( "Course-specific Expected Learning Outcomes", 70 );
+			$page->add_divider( "Course-specific Expected Learning Outcomes", 70 );
 
 			/* Parameters used to build the graphs */
 
@@ -81,43 +81,21 @@
 			// Add the first graph
 			$outcome['t'] = 'Basic understanding of background business reading material';
 			$outcome['sm'] = 4.0;
-			add_ratings_svg( $outcome, 75);
+			$page->add_ratings_svg( $outcome );
 
 			// Add another graph with minimal changes. 
 			$outcome['t'] = 'Use computer-aided learning tools and online learning resources';
 			$outcome['sm'] = 3.8;
-			add_ratings_svg( $outcome, 115);
+			$page->add_ratings_svg( $outcome );
 
 			// Add another graph with minimal changes
 			$outcome['t'] = 'Intelligently converse about key principles';
 			$outcome['sm'] = 3.9;
-			add_ratings_svg( $outcome, 155);
+			$page->add_ratings_svg( $outcome );
+
+			$page->add_legend( [ 'Not At All Successful', 'Not Very Successful', 'Moderately Successful', 'Successful', 'Very Successful' ] );
 
 		?>
-
-
-
-		<g class="labels">
-			<text transform="matrix(1 0 0 1 478 197)">
-				<tspan x="0" y="0">Very</tspan>
-				<tspan x="-8.7" y="8">Successful</tspan>
-			</text>
-			<text transform="matrix(1 0 0 1 409 197)">
-				<tspan x="0" y="0">Successful</tspan>
-			</text>
-			<text transform="matrix(1 0 0 1 347.3155 197)">
-				<tspan x="0" y="0">Moderately</tspan>
-				<tspan x="2.2" y="8">Successful</tspan>
-			</text>
-			<text transform="matrix(1 0 0 1 291 197)">
-				<tspan x="0" y="0">Not Very</tspan>
-				<tspan x="-2.2" y="8">Successful</tspan>
-			</text>
-			<text transform="matrix(1 0 0 1 230 197)">
-				<tspan x="0" y="0">Not at All</tspan>
-				<tspan x="-1.4" y="8">Successful</tspan>
-			</text>
-		</g>
 	</g>
 
 
@@ -125,7 +103,7 @@
 
 		<?php 
 
-			add_divider( "Instructor Effectiveness", 215 );
+			$page->add_divider( "Instructor Effectiveness" );
 
 			// Parameters used to build the graphs
 			$instructor = [
@@ -143,51 +121,30 @@
 			];
 
 			$instructor['t'] = 'Meaningful opportunities and encouragement';
-			add_ratings_svg( $instructor, 220);
+			$page->add_ratings_svg( $instructor );
 
 			$instructor['t'] = 'Teaching challenging concepts and skills';
-			add_ratings_svg( $instructor, 260);
+			$page->add_ratings_svg( $instructor );
 
 			$instructor['t'] = 'Demonstrating respect for individual students';
-			add_ratings_svg( $instructor, 300);
+			$page->add_ratings_svg( $instructor );
 
 			$instructor['t'] = 'Organizing course content to enhance learning';
-			add_ratings_svg( $instructor, 340);
+			$page->add_ratings_svg( $instructor );
 
 			$instructor['t'] = 'Helping students who indicate a need for assistance';
-			add_ratings_svg( $instructor, 380);
+			$page->add_ratings_svg( $instructor );
+
+			$page->add_legend( [ 'Not At All Effective', 'Not Very Effective', 'Moderately Effective', 'Effective', 'Very Effective' ] );
 
 		?>
-
-
-		<g class="labels">
-			<text transform="matrix(1 0 0 1 482.7573 423.5413)">
-				<tspan x="0" y="0">Very</tspan>
-				<tspan x="-6.3" y="8">Effective</tspan>
-			</text>
-			<text transform="matrix(1 0 0 1 414.2002 423.5408)">Effective</text>
-			<text transform="matrix(1 0 0 1 347.3155 423.4114)">
-				<tspan x="0" y="0">Moderately</tspan>
-				<tspan x="4.6" y="8">Effective</tspan>
-			</text>
-			<text transform="matrix(1 0 0 1 289.2007 423.5403)">
-				<tspan x="0" y="0">Not Very</tspan>
-				<tspan x="0.3" y="8">Effective</tspan>
-			</text>
-			<text transform="matrix(1 0 0 1 226.2539 423.9021)">
-				<tspan x="0" y="0">Not at All</tspan>
-				<tspan x="1" y="8">Effective</tspan>
-			</text>
-		</g>
 	</g>
-
-
 
 	<g id="Aims">
 
 		<?php 
 
-			add_divider( "Helped students achieve the Aims of a BYU Education", 435 );
+			$page->add_divider( "Helped students achieve the Aims of a BYU Education" );
 
 			// Parameters used to build the graphs
 			$byuAim = [
@@ -205,24 +162,24 @@
 			];
 
 			$byuAim['t'] = 'Spiritually strengthening';
-			add_ratings_svg( $byuAim, 440);
+			$page->add_ratings_svg( $byuAim );
 
 			$byuAim['t'] = 'Intellectually enlarging';
-			add_ratings_svg( $byuAim, 480);
+			$page->add_ratings_svg( $byuAim );
 
 			$byuAim['t'] = 'Character building';
-			add_ratings_svg( $byuAim, 520);
+			$page->add_ratings_svg( $byuAim );
 
 			$byuAim['t'] = 'Leading to lifelong learning and service';
-			add_ratings_svg( $byuAim, 560);
+			$page->add_ratings_svg( $byuAim );
 
 
-			add_legend( [ 'Detracted', 'No Effect', 'Moderately Enhanced', 'Enhanced', 'Strongly Enhanced' ] );
+			$page->add_legend( ['Detracted', 'No Effect', 'Moderately Enhanced', 'Enhanced', 'Strongly Enhanced'] );
 		?>
 
 	</g>
 
-	<line fill="none" stroke="#000000" stroke-width="0.25" stroke-miterlimit="2" x1="10" y1="628.5" x2="550" y2="628.5"/>
+	<?php $page->add_divider( "" ); ?>
 
 </svg>
 
@@ -232,13 +189,17 @@
 
 
 
+
+class PageRenderer
+{
+
 	
-/* Variables */
+/* Variables and constants */
 
-	$contentStart = 70; // The starting location for new content. Will be updated by the add_ functions below.
-	$graphMin = 115 + 130;
-	$graphMax = 115 + 370;
-
+	public $contentStart = 70; // The starting location for new content. Will be updated by the add_ functions below.
+	public $graph_min = 245; // Left edge of graph in page coordinate system
+	public $graph_max = 545; // Right edge of graph in page coordinate system
+	public $label_adjust = -8; // Move the labels on the x axis
 
 
 
@@ -246,31 +207,31 @@
 
 /* Functions */
 
-	/* Func: add_ratings_svg
+	/* Func: $page->add_ratings_svg
 	 * Desc: Add an SVG image from ratings-svg.php to show a new ratings graph
 	 * Args: $arr - Array  - Contains key => value pair for all of the parameters needed in the ratings-svg.php graphic.
 	 *       $loc - Number - The y coordinate where the graph should be placed
 	 */
-	function add_ratings_svg( $arr, $loc = null )
+	public function add_ratings_svg( $arr, $loc = null )
 	{
 		$q = http_build_query( $arr, '', '&amp;' );
-		if ( $loc === null ) { $loc = $contentStart; }
+		if ( $loc === null ) { $loc = $this->contentStart; }
 
 		?><image xlink:href="ratings-svg.php?<?php echo $q; ?>" 
 			x="115" y="<?php echo $loc; ?>" width="435" height="35" preserveAspectRatio="xMinYMin" /><?php
 
-		$contentStart += 40;
+		$this->contentStart += 40;
 	}
 
 
-	/* Func: add_divider
+	/* Func: $page->add_divider
 	 * Desc: Add a dividing line with a title between ratings graphs
 	 * Args: $title - String - The text of the title that should be displayed
 	 *       $loc - Number - The y coordinate where the divider should be placed
 	 */
-	function add_divider( $title, $loc = null )
+	public function add_divider( $title, $loc = null )
 	{
-		if ( $loc === null ) { $loc = $contentStart; }
+		if ( $loc === null ) { $loc = $this->contentStart; }
 
 		// SVG doesn't natively wrap text, so we have to insert <tspan> elements to get wrapping
 		$glue = '</tspan><tspan x="10" dy="12">'; // The code we'll need to wrap lines in SVG
@@ -287,7 +248,7 @@
 
 		<?php
 
-		$contentStart += 5;
+		$this->contentStart += 7;
 	}
 
 
@@ -295,27 +256,39 @@
 	 * Desc: Add a legend after a set of ratings graphs
 	 * Args: $legend - Array - A list of strings that define the levels of a graph.
 	 */
-	function add_legend( $legend, $loc = null )
+	public function add_legend( $legend, $loc = null )
 	{
-		if ( $loc === null ) { $loc = $contentStart; }
+		$this->contentStart += 5;
+		if ( $loc === null ) { $loc = $this->contentStart; }
 
-		?>
+		$numItems = count($legend);
+		$graphWidth = $this->graph_max - $this->graph_min;
+		$graphFactor = $graphWidth / $numItems;
 
-		<g class="labels">
-			<text transform="matrix(1 0 0 1 477.1987 608.4956)">
-				<tspan x="0" y="0">Strongly</tspan>
-				<tspan x="-2.6" y="8">Enhanced</tspan>
-			</text>
-			<text transform="matrix(1 0 0 1 412.3704 609.7729)">Enhanced</text>
-			<text transform="matrix(1 0 0 1 347.147 609.7725)">
-				<tspan x="0" y="0">Moderately</tspan>
-				<tspan x="2.9" y="8">Enhanced</tspan>
-			</text>
-			<text transform="matrix(1 0 0 1 289.3614 609.772)">No Effect</text>
-			<text transform="matrix(1 0 0 1 225.3369 610.1338)">Detracted</text>
-		</g>
+		echo '<g class="labels">';
 
-		<?php
+		for ( $i = 0; $i < $numItems; $i++ ) {
+			$posX = ( $i * $graphFactor ) + $this->graph_min + $this->label_adjust;
+			$posY = $loc;
+			$label = $legend[$i];
 
-		$contentStart += 20;
+			// SVG doesn't natively wrap text, so we have to insert <tspan> elements to get wrapping
+			$glue = '</tspan><tspan x="' . $posX . '" dy="8">'; // The code we'll need to wrap lines in SVG
+			$labelWrapped = wordwrap( $label, 12, $glue ); // Split the lines. This is the variable that gets inserted below in the SVG code.
+
+			echo '<text x="' . $posX . '" y="' . $posY . '">';
+			echo '	<tspan x="' . $posX . '">';
+
+			echo $labelWrapped;
+
+			echo '	</tspan>';
+			echo '</text>';
+
+		}
+
+		echo '</g>';
+
+		$this->contentStart += 15;
 	}
+
+}
