@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 150 112" enable-background="new 0 0 150 112" xml:space="preserve">
+<line fill="none" stroke="#000000" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="0,1.5" x1="16.5" y1="94.3" x2="151.5" y2="94.3"/>
+<g>
+	<text transform="matrix(1 0 0 1 4.1722 30.7495)"><tspan x="0" y="0" fill="#666766" font-family="'Calibri'" font-size="8">A</tspan><tspan x="0.1" y="12" fill="#666766" font-family="'Calibri'" font-size="8">B</tspan><tspan x="0.2" y="24" fill="#666766" font-family="'Calibri'" font-size="8">C</tspan><tspan x="-0.1" y="36" fill="#666766" font-family="'Calibri'" font-size="8">D</tspan><tspan x="0.4" y="48" fill="#666766" font-family="'Calibri'" font-size="8">E</tspan><tspan x="-1.2" y="60" fill="#666766" font-family="'Calibri'" font-size="8">W</tspan></text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 19.1537 104.9623)" fill="#666766" font-family="'Calibri'" font-size="8">Course</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 51.7362 104.9623)" fill="#666766" font-family="'Calibri'" font-size="8">Dept</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 84.3192 104.9623)" fill="#666766" font-family="'Calibri'" font-size="8">College</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 116.9027 104.9623)" fill="#666766" font-family="'Calibri'" font-size="8">Univ</text>
+</g>
+<line fill="none" stroke="#000000" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="0,1.5" x1="16.5" y1="82.2" x2="151.5" y2="82.2"/>
+<line fill="none" stroke="#000000" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="0,1.5" x1="16.5" y1="70.1" x2="151.5" y2="70.1"/>
+<line fill="none" stroke="#000000" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="0,1.5" x1="16.5" y1="58" x2="151.5" y2="58"/>
+<line fill="none" stroke="#000000" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="0,1.5" x1="16.5" y1="45.9" x2="151.5" y2="45.9"/>
+<line fill="none" stroke="#000000" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="0,1.5" x1="16.5" y1="33.9" x2="151.5" y2="33.9"/>
+<line fill="none" stroke="#000000" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="0,1.5" x1="16.5" y1="21.8" x2="151.5" y2="21.8"/>
+<g>
+	<text transform="matrix(1 0 0 1 16.4798 9.8486)" font-family="'Calibri-Bold'" font-size="9">Grade distribution (%)</text>
+</g>
+</svg>

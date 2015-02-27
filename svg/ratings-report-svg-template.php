@@ -12,7 +12,7 @@
 ?>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 viewBox="0 0 558 767" enable-background="new 0 0 558 767" xml:space="preserve">
+		 viewBox="0 0 558 750" enable-background="new 0 0 558 750" xml:space="preserve">
 	
 	<!-- CSS Styles -->
 	<style>
@@ -68,7 +68,7 @@
 			 * but if there are overlapping values it makes sense to just use one and modify
 			 * the values that change.
 			 */
-			$outcome = [
+			$outcome = array(
 				'minN' => 1,  // The lowest number that can be input for the graph
 				'maxN' => 5,  // The highest number that can be input for the graph
 				't'  => "",   // Title
@@ -76,7 +76,7 @@
 				'r'  => 104,  // Respondents
 				'sm' => 4,    // Section mean
 				'sc' => 0.65, // Section confidence
-			];
+			);
 
 			// Add the first graph
 			$outcome['t'] = 'Basic understanding of background business reading material';
@@ -93,7 +93,7 @@
 			$outcome['sm'] = 3.9;
 			$page->add_ratings_svg( $outcome );
 
-			$page->add_legend( [ 'Not At All Successful', 'Not Very Successful', 'Moderately Successful', 'Successful', 'Very Successful' ] );
+			$page->add_legend( array( 'Not At All Successful', 'Not Very Successful', 'Moderately Successful', 'Successful', 'Very Successful' ) );
 
 		?>
 	</g>
@@ -106,7 +106,7 @@
 			$page->add_divider( "Instructor Effectiveness" );
 
 			// Parameters used to build the graphs
-			$instructor = [
+			$instructor = array(
 				't'  => "",   // Title
 				'n'  => 698,  // Class size
 				'r'  => 104,  // Respondents
@@ -118,7 +118,7 @@
 				'cc' => 0.3,  // College confidence
 				'um' => 3.7,  // University mean
 				'uc' => 0.2,  // University confidence
-			];
+			);
 
 			$instructor['t'] = 'Meaningful opportunities and encouragement';
 			$page->add_ratings_svg( $instructor );
@@ -135,7 +135,7 @@
 			$instructor['t'] = 'Helping students who indicate a need for assistance';
 			$page->add_ratings_svg( $instructor );
 
-			$page->add_legend( [ 'Not At All Effective', 'Not Very Effective', 'Moderately Effective', 'Effective', 'Very Effective' ] );
+			$page->add_legend( array( 'Not At All Effective', 'Not Very Effective', 'Moderately Effective', 'Effective', 'Very Effective' ) );
 
 		?>
 	</g>
@@ -147,7 +147,7 @@
 			$page->add_divider( "Helped students achieve the Aims of a BYU Education" );
 
 			// Parameters used to build the graphs
-			$byuAim = [
+			$byuAim = array(
 				't'  => "",   // Title
 				'n'  => 698,  // Class size
 				'r'  => 104,  // Respondents
@@ -159,7 +159,7 @@
 				'cc' => 0.3,  // College confidence
 				'um' => 3.55,  // University mean
 				'uc' => 0.2,  // University confidence
-			];
+			);
 
 			$byuAim['t'] = 'Spiritually strengthening';
 			$page->add_ratings_svg( $byuAim );
@@ -174,12 +174,43 @@
 			$page->add_ratings_svg( $byuAim );
 
 
-			$page->add_legend( ['Detracted', 'No Effect', 'Moderately Enhanced', 'Enhanced', 'Strongly Enhanced'] );
+			$page->add_legend( array('Detracted', 'No Effect', 'Moderately Enhanced', 'Enhanced', 'Strongly Enhanced') );
 		?>
 
 	</g>
 
 	<?php $page->add_divider( "" ); ?>
+
+	<?php
+
+	/* Bottom Stats */
+
+
+		/* Grade Distribution */ 
+
+		// Here are the grade distributions for each column, listed top (A) to bottom (W)
+		$data = array(
+			array(42.6,31.6,15.5,6.8,3.1,7.1), // Section
+			array(43.9,40.3,7.8,3.1,1.2,3.6),  // Dept
+			array(57.5,33.2,4.9,1.2,1.0,2.2),  // College
+			array(56.6,26.8,7.9,2.2,2.1,3.3)   // Univ
+		);
+
+		$dist = array(
+			'legendY' => array('A','B','C','D','E','W'),
+			'legendX' => array('Section','Dept','College','Univ'),
+			'data'    => $data
+		);
+
+		$q = http_build_query( $dist, null, '&amp;');
+
+	?>
+	
+	<g id="distribution">
+		<image xlink:href="grade-distribution-svg.php?<?php echo $q; ?>" 
+			x="10" y="640" width="150" height="112" preserveAspectRatio="xMinYMin" />
+
+	</g>
 
 </svg>
 
@@ -199,7 +230,6 @@ class PageRenderer
 	public $contentStart = 70; // The starting location for new content. Will be updated by the add_ functions below.
 	public $graph_min = 245; // Left edge of graph in page coordinate system
 	public $graph_max = 545; // Right edge of graph in page coordinate system
-	public $label_adjust = -8; // Move the labels on the x axis
 
 
 
@@ -268,16 +298,16 @@ class PageRenderer
 		echo '<g class="labels">';
 
 		for ( $i = 0; $i < $numItems; $i++ ) {
-			$posX = ( $i * $graphFactor ) + $this->graph_min + $this->label_adjust;
+			$posX = ( $i * $graphFactor ) + $this->graph_min;
 			$posY = $loc;
 			$label = $legend[$i];
 
 			// SVG doesn't natively wrap text, so we have to insert <tspan> elements to get wrapping
-			$glue = '</tspan><tspan x="' . $posX . '" dy="8">'; // The code we'll need to wrap lines in SVG
+			$glue = '</tspan><tspan x="' . $posX . '" dy="8" text-anchor="middle">'; // The code we'll need to wrap lines in SVG
 			$labelWrapped = wordwrap( $label, 12, $glue ); // Split the lines. This is the variable that gets inserted below in the SVG code.
 
 			echo '<text x="' . $posX . '" y="' . $posY . '">';
-			echo '	<tspan x="' . $posX . '">';
+			echo '	<tspan x="' . $posX . '" text-anchor="middle">';
 
 			echo $labelWrapped;
 

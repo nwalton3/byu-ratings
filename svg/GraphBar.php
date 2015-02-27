@@ -73,11 +73,11 @@ class GraphBar
 		$end    = $this->translateCoordinates( $high );
 
 		// Return an array with the correct coordinates to be used in the SVG display
-		$array = [
+		$array = array(
 			'begin'  => $begin,
 			'end'    => $end,
 			'length' => $end - $begin,
-		];
+		);
 
 		return $array;
 	}
@@ -103,7 +103,7 @@ class GraphBar
 	 */
 	public function getInputRange()
 	{
-		return [ 'min' => $this->inputMin, 'max' => $this->inputMax = $this->inputMax ];
+		return array( 'min' => $this->inputMin, 'max' => $this->inputMax = $this->inputMax );
 	}
 
 
@@ -127,7 +127,7 @@ class GraphBar
 	 */
 	public function getGraphBoundaries()
 	{
-		return [ 'min' => $this->graphMin, 'max' => $this->graphMax ];
+		return array( 'min' => $this->graphMin, 'max' => $this->graphMax );
 	}
 
 
