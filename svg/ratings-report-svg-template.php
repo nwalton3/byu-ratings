@@ -12,9 +12,8 @@
 ?>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 viewBox="0 0 558 750" enable-background="new 0 0 558 750" xml:space="preserve">
+		 viewBox="0 0 558 755" enable-background="new 0 0 558 755" xml:space="preserve">
 	
-	<!-- CSS Styles -->
 	<style>
 		@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600);
 	
@@ -30,14 +29,13 @@
 	</style>
 
 
-	<!-- Page Header -->
 	<g id="Header">
 
 		<g id="Title">
 			<text x="10" y="13" class="sectionTitle">BYU Student Rating Individual Section Report</text>
 			<text x="10" y="36">
 				<tspan class="course">ACC 200</tspan>
-				<tspan class="courseInfo"> • Fall 2013 • Section 002</tspan>
+				<tspan class="courseInfo"> - Fall 2013 - Section 002</tspan>
 			</text>
 			<text x="10" y="52" font-size="14">Kay Stice</text>
 		</g>
@@ -55,7 +53,6 @@
 
 
 
-	<!-- Graphs for each outcome -->
 	<g id="Outcomes">
 
 		<?php 
@@ -151,13 +148,13 @@
 				't'  => "",   // Title
 				'n'  => 698,  // Class size
 				'r'  => 104,  // Respondents
-				'sm' => 3.75,    // Section mean
+				'sm' => 3.75, // Section mean
 				'sc' => 0.65, // Section confidence
 				'dm' => 3.3,  // Department mean
 				'dc' => 0.4,  // Department confidence
-				'cm' => 3.6, // College mean
+				'cm' => 3.6,  // College mean
 				'cc' => 0.3,  // College confidence
-				'um' => 3.55,  // University mean
+				'um' => 3.55, // University mean
 				'uc' => 0.2,  // University confidence
 			);
 
@@ -183,9 +180,63 @@
 
 	<?php
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	/* Bottom Stats */
 
+		/* Average Time */
 
+		$time = array(
+			'title' => 'Workload per credit hour',
+			'legendY' => array(4,3,2,1,0), // The headings on the left side
+			'legendX' => array('Section','Dept','College','Univ'), // The headings on the bottom
+			'decimals' => 1,
+			'data' => array(2.6,2.5,2.5,2.1),
+		);
+
+		$q = http_build_query( $time, null, '&amp;');
+	?>
+	
+	<image xlink:href="chart-svg.php?<?php echo $q; ?>" 
+		x="10" y="<?php echo $page->contentStart; ?>" width="150" height="115" preserveAspectRatio="xMinYMin" />
+
+
+
+
+	<?php
+		/* GPA */
+
+		$gpa = array(
+			'title' => 'Mean GPA',
+			'legendY' => array(4,3,2,1,0), // The headings on the left side
+			'legendX' => array('Section','Dept','College','Univ'), // The headings on the bottom
+			'decimals' => 2,
+			'data' => array(3.6,3.28,3.47,3.4)
+		);
+
+		$q = http_build_query( $gpa, null, '&amp;');
+	?>
+
+	<image xlink:href="chart-svg.php?<?php echo $q; ?>" 
+		x="205" y="<?php echo $page->contentStart; ?>" width="150" height="115" preserveAspectRatio="xMinYMin" />
+
+
+
+
+	<?php
 		/* Grade Distribution */ 
 
 		// Here are the grade distributions for each column, listed top (A) to bottom (W)
@@ -197,30 +248,63 @@
 		);
 
 		$dist = array(
-			'legendY' => array('A','B','C','D','E','W'),
-			'legendX' => array('Section','Dept','College','Univ'),
-			'data'    => $data
+			'title' => 'Grade distribution (%)',
+			'legendY'  => array('A','B','C','D','E','W'), // The headings on the left side
+			'legendX'  => array('Section','Dept','College','Univ'), // The headings on the bottom
+			'decimals' => 1, // How many decimals numbers ought to have
+			'data'     => $data // The data for the table
 		);
 
 		$q = http_build_query( $dist, null, '&amp;');
 
 	?>
 	
-	<g id="distribution">
-		<image xlink:href="grade-distribution-svg.php?<?php echo $q; ?>" 
-			x="10" y="640" width="150" height="112" preserveAspectRatio="xMinYMin" />
-
-	</g>
+	<image xlink:href="chart-svg.php?<?php echo $q; ?>" 
+		x="400" y="<?php echo $page->contentStart; ?>" width="150" height="115" preserveAspectRatio="xMinYMin" />
+	
 
 </svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <?php 
 
 
-
-
-
+/**
+ * PageRenderer
+ *
+ * Adds functions that allow you to create all of the elements on the page and place them one after the other.
+ *
+ */
 class PageRenderer
 {
 

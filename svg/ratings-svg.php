@@ -158,10 +158,10 @@
 
 
 	<g id="BG">
-		<?php if ( $section )    { ?><text class="legend" transform="matrix(1 0 0 1 398 6)"   fill="#BE2026">Section</text><?php } ?>
-		<?php if ( $department ) { ?><text class="legend" transform="matrix(1 0 0 1 398 13)" fill="#F1B71C">Department</text><?php } ?>
+		<?php if ( $section )    { ?><text class="legend" transform="matrix(1 0 0 1 398 6)"    fill="#BE2026">Section</text><?php } ?>
+		<?php if ( $department ) { ?><text class="legend" transform="matrix(1 0 0 1 398 13)"   fill="#F1B71C">Department</text><?php } ?>
 		<?php if ( $college )    { ?><text class="legend" transform="matrix(1 0 0 1 398 20.5)" fill="#75C044">College</text><?php } ?>
-		<?php if ( $university ) { ?><text class="legend" transform="matrix(1 0 0 1 398 28)" fill="#1F4389">University</text><?php } ?>
+		<?php if ( $university ) { ?><text class="legend" transform="matrix(1 0 0 1 398 28)"   fill="#1F4389">University</text><?php } ?>
 		
 		<?php 
 			// Get the boundaries of the input and the graph
