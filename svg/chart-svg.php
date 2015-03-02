@@ -24,9 +24,10 @@
 	$legendStart = $rowStart - 6;
 
 	$showBars = true;
-	$barColors = array('#BE2026', '#F1B71C', '#75C044', '#1F4389');
+	$barWidth = 14; // Width of graph bars
+	$barColors = array('#BE2026', '#F1B71C', '#75C044', '#1F4389'); // Colors of graph bars
 
-	if ( is_array($data[0]) ) {
+	if ( is_array($data[0]) ) { // If it's a multidimensional array, show the numbers instead of the bars
 		$showBars = false;
 		$numRows = count($legendY);
 		$legendStart = $rowStart;
@@ -111,12 +112,12 @@
 
 				$barHeight = $barNum / $maxNum * $graph_h;
 				$barSpace = $graph_h - $barHeight;
-				$barX = $colStart + ($colSpace * $b) - 10;
+				$barX = $colStart + ($colSpace * $b) - 10 - ( ($barWidth - 10) / 2 ); // This math is a little weird, but it lines up the bars with their labels.
 				$barY = $barSpace + $rowStart - 9;
-				$textX = $barX + 5;
+				$textX = $barX + ( $barWidth / 2 );
 				$textY = $barY - 2;
 
-				echo '<rect x="' . $barX . '" y="' . $barY . '" fill="' . $barColors[$b] . '" width="10" height="' . $barHeight . '"/>';
+				echo '<rect x="' . $barX . '" y="' . $barY . '" fill="' . $barColors[$b] . '" width="' . $barWidth . '" height="' . $barHeight . '"/>';
 				echo '<text x="' . $textX . '" y="' . $textY . '" text-anchor="middle">' . $data[$b] . '</text>';
 			}
 
