@@ -1,0 +1,58 @@
+extends _layout
+
+
+//-	===============
+//-	Mixins
+//-	===============
+
+
+
+//-	===============
+//-	Overrides
+//-	===============
+
+block pageTitle
+	| BYU - Student Ratings Report
+
+block heading
+	| Student Ratings of the Learning Experience
+
+block nav
+	.nav-container
+
+		// Primary Nav
+		nav#primary-nav(role='navigation'): ul
+			li 
+				a.single.current(href='#') Home
+			li 
+				a.single(href='#') FAQ
+
+
+block content
+
+	h3.reportTitle BYU Student Rating Individual Section Report
+
+	h1 
+		span.course ECON 110 
+		span.courseInfo.yearterm Fall 2010 
+		span.courseInfo.sections Section 002 
+
+	h2.instructor Kay Stice
+	
+	div.cumulative
+		h3 Cumulative Course Evaluation
+		dl
+			dt Instruction
+			dd 4.55
+			dt Aims
+			dd 4.32
+
+
+
+
+//- Remove stuff
+block breadcrumb
+block search-menu
+block sign-in
+
+block footer
