@@ -1,0 +1,80 @@
+extends _layout
+
+
+
+
+//-	===============
+//-	Overrides
+//-	===============
+
+block pageTitle
+	| BYU - Student Ratings Report
+
+block heading
+	| Student Ratings of the Learning Experience
+
+block nav
+	.nav-container
+
+		// Primary Nav
+		nav#primary-nav(role='navigation'): ul
+			li 
+				a.single.current(href='#') Home
+			li 
+				a.single(href='#') FAQ
+
+
+block content
+
+	h3.reportTitle BYU Student Rating Individual Section Report
+
+	h1 
+		span.course ECON 110 
+		span.courseInfo.yearterm Fall 2010 
+		span.courseInfo.sections Section 002 
+
+	h2.instructor Kay Stice
+	
+	div.cumulative
+		h3 Cumulative Course Evaluation
+		dl
+			dt Instruction
+			dd 4.55
+			dt Aims
+			dd 4.32
+
+
+	div(role="tabpanel")
+
+		ul(class="nav nav-tabs" role="tablist")
+			li(role="presentation" class="active") 
+				a(href="#overview" aria-controls="overview" role="tab" data-toggle="tab") Overview
+			li(role="presentation") 
+				a(href="#outcomes" aria-controls="outcomes" role="tab" data-toggle="tab") Outcomes
+			li(role="presentation") 
+				a(href="#instructor" aria-controls="instructor" role="tab" data-toggle="tab") Instructor
+			li(role="presentation") 
+				a(href="#aims" aria-controls="aims" role="tab" data-toggle="tab") Aims
+
+		<!-- Tab panes -->
+		div.tab-content
+			div(role="tabpanel" class="tab-pane fade in active" id="overview")
+				img(src="svg/ratings-report-svg-template.php")
+			div(role="tabpanel" class="tab-pane fade" id="outcomes") ...Outcomes
+			div(role="tabpanel" class="tab-pane fade" id="instructor") ...Instructor
+			div(role="tabpanel" class="tab-pane fade" id="aims") ...Aims
+
+
+
+block footer-scripts
+	script(src="js/jquery-2.1.3.min.js")
+	script(src="js/bootstrap.min.js")
+	script(src="js/ratings.js")
+
+
+//- Remove stuff
+block breadcrumb
+block search-menu
+block sign-in
+
+block footer

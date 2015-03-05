@@ -1,0 +1,75 @@
+/* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600);
+.report-header *, .report * { font-family: "Source Sans Pro", "Calibri", Helvetica, Arial, sans-serif; }
+
+.expand { display: none; visibility: hidden; }
+
+.report-header h3.report-title { font-size: 1em; margin-bottom: 1em; }
+.report-header h1 { margin: 0.5em 0 0.25em; line-height: 0.8em; font-weight: bold; }
+.report-header h1 .courseInfo { font-size: 0.8em; }
+.report-header h1 .courseInfo:before { content: " - "; }
+.report-header h2.instructor { margin-top: 0; }
+.report-header .cumulative { border-top: 1px solid #ccc; margin: 1.25em 0 1.75em; padding: 0.75em 0 0.5em; }
+.report-header .cumulative:after { content: ""; display: table; clear: both; }
+.report-header .cumulative h3 { font-size: 1em; margin-top: 0; margin-bottom: 0.5em; font-weight: normal; }
+.report-header .cumulative dl { margin: 0; }
+.report-header .cumulative dl:after { content: ""; display: table; clear: both; }
+.report-header .cumulative dl dt { float: left; clear: left; line-height: 1.15; margin-bottom: 0.5em; }
+.report-header .cumulative dl dt:after { content: ": "; }
+.report-header .cumulative dl dd { float: left; font-weight: bold; margin-left: 0; font-size: 1.15em; padding: 0 0.25em; line-height: 1; }
+
+.report-item .stats .numbers dd, .report-item .stats h4 { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.report-item .stats .numbers dd.focusable:active, .report-item .stats h4.focusable:active, .report-item .stats .numbers dd.focusable:focus, .report-item .stats h4.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+.report-item .questionInfo { margin-bottom: 1em; }
+.report-item .questionInfo .response-rate { font-style: italic; color: #888; }
+.report-item .stats dt { display: inline-block; }
+.report-item .stats dd { display: inline; margin: 0; padding: 0; }
+.report-item .stats dd:after { display: block; content: ""; }
+.report-item .stats .numbers { width: 2em; font-size: 0.9em; line-height: 1.175; position: absolute; top: 0; right: 0; }
+.report-item .stats .numbers dl { margin: 0; }
+.report-item .stats .numbers dt { font-weight: normal; line-height: 1.2; }
+.report-item .stats .numbers dt .title { display: none; }
+.report-item .stats .graph { margin-right: 2.25em; border-right: 1px solid #ccc; }
+.report-item .stats .levels dt:after { content: " - "; }
+@media (min-width: 30em) { .report-item .stats h4 dd { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+  .report-item .stats h4 dd.focusable:active, .report-item .stats h4 dd.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; } }
+.report-item .comments h4 { color: #369; cursor: pointer; padding-left: 1em; }
+.report-item .comments h4:hover { color: #036; }
+.report-item .comments h4:before { content: " "; display: block; position: absolute; top: 50%; left: 0; margin-top: -5px; transform: rotate(0deg); width: 0; height: 0; border-style: solid; border-width: 5px 0 5px 8.7px; border-color: transparent transparent transparent #628cb6; transition: all 200ms ease; }
+.report-item .comments ol { display: none; opacity: 0; transition: all 200ms ease; }
+.report-item .comments.open h4:before { transform: rotate(90deg); }
+.report-item .comments.open ol { opacity: 1; display: block; }
+
+.nav-tabs { margin-left: 0; }
+.nav-tabs a { outline: 0; }
+
+.report .print-btn { transition: all 0.2s ease; position: absolute; top: 1.25em; left: 0.6em; z-index: 2; }
+.report .tab-content .ratings.aspectratio { width: 100%; height: 0; padding-bottom: 135.3%; position: relative; }
+.report .tab-content .ratings.aspectratio iframe { width: 100%; height: 100%; position: absolute; left: 0; top: 0; border: none; }
+.report .tab-content .ratings.aspectratio:after { content: " "; width: 100%; height: 0; background-color: white; position: absolute; display: block; top: 0; left: 0; padding-bottom: 12%; }
+.report .tab-pane { padding-top: 1em; max-width: 64em; overflow: hidden; }
+.report .scroller { min-width: 45em; overflow-x: hidden; }
+.report #overview { overflow: auto; }
+
+@media (min-width: 56em) { .expand { display: inline; visibility: visible; } }
+@media (min-width: 62em) { .report-header h1, .report-header h2, .report-header h3 { margin-right: 256px; margin-right: 16rem; }
+  .report-header .cumulative { width: 256px; width: 16rem; position: absolute; top: 0; right: 0; border-top: none; text-align: right; margin-top: 1em; padding-top: 0; }
+  .report-header .cumulative h3 { margin-right: 0; margin-bottom: 0.25em; }
+  .report-header .cumulative dl dt { text-align: right; width: 198px; width: 12.4rem; margin-bottom: 0.2em; }
+  .report-header .cumulative dl dd { width: 56px; width: 3.5rem; text-align: left; padding-left: 0.5em; padding-right: 0; } }
+@media print { header, .nav-container, .report-header, .nav-tabs, .print-btn { display: none; }
+  .tab-pane { page-break-after: always; }
+  #overview.active .ratings.aspectratio:after { display: none; }
+  #overview.active ~ .tab-pane { display: block !important; visibility: visible !important; opacity: 1 !important; padding-top: 0; font-size: 0.85em; }
+  #overview.active ~ .tab-pane * { font-family: "Source Sans Pro", "Calibri", Helvetica, Arial, sans-serif; }
+  #overview.active ~ .tab-pane:before { content: "Student Comments"; display: block; font-size: 1.25em; font-weight: bold; margin: 2em 0 1em; }
+  #overview.active ~ .tab-pane h2 { border-bottom: 1px solid black; margin-top: 1em; }
+  #overview.active ~ .tab-pane .questionInfo { break-inside: avoid; }
+  #overview.active ~ .tab-pane .comments h4 { font-size: 1em; }
+  #overview.active ~ .tab-pane .comments h4 .number { display: none; }
+  #overview.active ~ .tab-pane .comments ol { margin-left: 2em; display: block; opacity: 1; }
+  #overview.active ~ .tab-pane .comments li { border-top: 1px dotted #999; padding: 1em 0; line-height: 1.3; }
+  #overview.active ~ .tab-pane .stats, #overview.active ~ .tab-pane .response-rate { display: none; } }
+
+/*# sourceMappingURL=report.css.map */

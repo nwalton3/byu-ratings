@@ -1,37 +1,9 @@
 //-	===============
-//-	MIXINS
-//-	===============
-mixin secondaryMenuItem(title, num)
-	li
-		a(href='#') #{title}
-		ul.sub
-			mixin addListLinks(1,4)
-
-
-mixin addListLinks(start, end, title)
-	- if (title == undefined) title = 'Menu item';
-	- for (var i = start; i <= end; i++) {
-		li: a(href='') #{title} #{i}
-	- }
-
-mixin addLinks(start, end, title)
-	- if (title == undefined) title = 'Menu item';
-	- for (var i = start; i <= end; i++) {
-		a(href='') #{title} #{i}
-	- }
-	
-
-
-
-
-
-//-	===============
 //-	PAGE START
 //-	===============
 
 doctype html
 html.no-js(lang="en")
-	// <![endif]
 
 
 	//-	===============
@@ -264,6 +236,15 @@ html.no-js(lang="en")
 						a#ldsbc.ir(href='http://www.ldsbc.edu/') LDS Business College
 
 						a#lds(href='http://lds.org/') The Church of Jesus Christ of Latter-day Saints
-
+		
 			//
 				| CONTENT END
+
+
+
+		//-	===============
+		//-	Footer scripts
+		//-	===============
+
+		block footer-scripts
+

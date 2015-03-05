@@ -7,6 +7,8 @@
 	echo '<?xml version="1.0" encoding="utf-8" ?>';
 
 	$page = new PageRenderer();
+	$absPath = 'http://localhost:8888/byu-ratings/svg/';
+
 /* SVG code below */
 
 ?>

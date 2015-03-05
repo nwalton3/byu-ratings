@@ -15,11 +15,20 @@ $btn-success-border: mix($green2, $green3)
 
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins"
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons"
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs"
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_component-animations.scss"
+
+
 
 
 *, *:before, *:after
 	box-sizing: border-box
 	position: relative
+
+h1 .expand
+	display: none
+	@media (min-width: 50em)
+		display: inline
 
 
 form
@@ -252,6 +261,12 @@ $error-mix: 96%
 	font-size: 1em
 	padding-left: 2em
 	padding-right: 2em
+
+
+// Styles for report
+@import "report"
+
+
 
 
 
