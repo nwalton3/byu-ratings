@@ -87,12 +87,12 @@
   .report-header .cumulative h3 { margin-right: 0; margin-bottom: 0.25em; }
   .report-header .cumulative dl dt { text-align: right; width: 198px; width: 12.4rem; margin-bottom: 0.2em; }
   .report-header .cumulative dl dd { width: 56px; width: 3.5rem; text-align: left; padding-left: 0.5em; padding-right: 0; } }
-@media print { header, .nav-container, .report-header, .nav-tabs, .print-btn, .tab-pane h2, #grading .report-item { display: none !important; }
+@media print { header, .nav-container, .report-header, .nav-tabs, .print-btn, #grading .report-item, #grading h2 { display: none !important; }
   .report-item:last-child { border-bottom: 1px solid #bbb; }
   #overview.active .ratings.aspectratio:after { display: none; }
   #overview.active ~ .tab-pane { display: block !important; visibility: visible !important; opacity: 1 !important; padding-top: 0; font-size: 0.85em; }
   #overview.active ~ .tab-pane * { font-family: "Source Sans Pro", "Calibri", Helvetica, Arial, sans-serif; }
-  #overview.active ~ .tab-pane h2 { margin-top: 1em; }
+  #overview.active ~ .tab-pane h2 { margin-top: 2em; font-size: 1.4em; font-weight: bold; }
   #overview.active ~ .tab-pane .questionInfo { break-inside: avoid; }
   #overview.active ~ .tab-pane .comments h4 { font-size: 1em; padding-left: 0; }
   #overview.active ~ .tab-pane .comments h4 .number { display: none; }
