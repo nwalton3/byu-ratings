@@ -132,4 +132,20 @@
 }
 
 
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+@mixin visuallyunhidden() {
+	border: 0;
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	padding: 0;
+	position: relative;
+	width: auto;
+}
+
 

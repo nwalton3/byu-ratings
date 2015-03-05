@@ -3,6 +3,7 @@
 * This is not only for layouts, but also any additional features such as CSS3 for any elements already declared in base.css
 */
 /* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+/* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 /*!
 	Twitter Bootstrap (Scss version)
 */
@@ -318,6 +319,7 @@ a:link.btn-link, a:link.btn-info, a:visited.btn-link, a:visited.btn-info { color
 *
 */
 /* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+/* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 #logo { padding-left: 3%; }
 #logo h2 { margin-left: -9px; }
 
@@ -378,6 +380,7 @@ width: 160px;
 * Search
 */
 /* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+/* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 /* Small width */
 #search-menu { height: auto; padding: 5px 3% 5px 75px; overflow: hidden; z-index: 10; min-height: 42px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -427,6 +430,7 @@ width: 160px;
 * Navigation
 *
 */
+/* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 /* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 html { overflow-x: hidden; overflow-y: scroll; }
 
@@ -570,6 +574,7 @@ body.sideNav #main-header, body.sideNav #search-menu, body.sideNav #content, bod
 * Content 
 *
 */
+/* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 /* Hide only visually, but have it available for screen readers: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 @media all and (min-width: 37.5em) { #content { padding: 1em 9% 4em; } }
 @media all and (min-width: 56.25em) { .one-sidebar #main-content, .one-sidebar .sidebar, .two-sidebars #main-content, .two-sidebars .sidebar { float: left; }

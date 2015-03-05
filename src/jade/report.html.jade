@@ -33,22 +33,24 @@ mixin addStats
 		.levels
 			h4 Levels
 			dl
-				dt 5
-				dd Very Successful
+				dt.level-5 5
+				dd.level-5 Very Successful
 
-				dt 4
-				dd Successful
+				dt.level-4 4
+				dd.level-4 Successful
 
-				dt 3
-				dd Moderately Successful
+				dt.level-3 3
+				dd.level-3 Moderately Successful
 
-				dt 2
-				dd Not Very Successful
+				dt.level-2 2
+				dd.level-2 Not Very Successful
 
-				dt 1
-				dd Not At All Successful
+				dt.level-1 1
+				dd.level-1 Not At All Successful
+	+addComments()
 
 
+mixin addComments
 	.comments
 		h4 
 			| Comments 
@@ -118,9 +120,13 @@ block content
 			li(role="presentation" class="active")
 				a(href="#overview" aria-controls="overview" role="tab" data-toggle="tab") Overview
 			li(role="presentation")
-				a(href="#instructor" aria-controls="instructor" role="tab" data-toggle="tab") Instructor
+				a(href="#instructor" aria-controls="instructor" role="tab" data-toggle="tab") 
+					| Instructor 
+					span.expand Effectiveness
 			li(role="presentation")
-				a(href="#aims" aria-controls="aims" role="tab" data-toggle="tab") Aims
+				a(href="#aims" aria-controls="aims" role="tab" data-toggle="tab") 
+					span.expand BYU
+					|  Aims
 			li(role="presentation")
 				a(href="#overall" aria-controls="overall" role="tab" data-toggle="tab")
 					| Overall 
@@ -128,7 +134,9 @@ block content
 			li(role="presentation")
 				a(href="#work" aria-controls="work" role="tab" data-toggle="tab") 
 					| Workload 
-					span.expand & Grading
+			li(role="presentation")
+				a(href="#grading" aria-controls="grading" role="tab" data-toggle="tab") 
+					| Grading 
 
 		div.tab-content
 			div(role="tabpanel" class="tab-pane fade in active" id="overview")
@@ -139,7 +147,7 @@ block content
 
 
 			div(role="tabpanel" class="tab-pane fade" id="instructor")
-				h2 Instructor
+				h2 Instructor - Borup, Michael Brett
 
 				.report-item
 					.questionInfo
@@ -157,29 +165,80 @@ block content
 
 				.report-item
 					.questionInfo
-						h3 Intelligently converse about key principles
-						p Most of us know how to communicate politely in our first language. We know that certain phrases are appropriate when we are chatting with friends but are inappropriate in other situations when it is essential that we speak in a more formal and polite way.
+						h3 Teaching challenging concepts and skills
+						p How effective was the instructor (not the TA) in teaching challenging concepts or skills?
 						.response-rate 104/698 responded
 					+addStats
 
 				.report-item
 					.questionInfo
-						h3 Intelligently converse about key principles
-						p Most of us know how to communicate politely in our first language. We know that certain phrases are appropriate when we are chatting with friends but are inappropriate in other situations when it is essential that we speak in a more formal and polite way.
+						h3 Demonstrating respect for individual students
+						p How effective was this instructor in demonstrating respect for students and their opinions, questions, or concerns?
 						.response-rate 104/698 responded
 					+addStats
 
 				.report-item
 					.questionInfo
-						h3 Intelligently converse about key principles
-						p Most of us know how to communicate politely in our first language. We know that certain phrases are appropriate when we are chatting with friends but are inappropriate in other situations when it is essential that we speak in a more formal and polite way.
+						h3 Organizing course content to enhance learning
+						p How effective was the instructor in organizing the course content to enhance learning?
 						.response-rate 104/698 responded
 					+addStats
 
 
-			div(role="tabpanel" class="tab-pane fade" id="aims") ...Aims
-			div(role="tabpanel" class="tab-pane fade" id="overall") ...Instructor
-			div(role="tabpanel" class="tab-pane fade" id="work") ...Workload & Grading
+			div(role="tabpanel" class="tab-pane fade" id="aims") 
+				h2 What effect did this course and instructor have in helping you achieve the Aims of a BYU Education?
+
+				.report-item
+					.questionInfo
+						h3 Spiritually Strengthening:
+						.response-rate 104/698 responded
+					+addStats
+
+				.report-item
+					.questionInfo
+						h3 Intellectually Enlarging:
+						.response-rate 104/698 responded
+					+addStats
+
+				.report-item
+					.questionInfo
+						h3 Character Building:
+						.response-rate 104/698 responded
+					+addStats
+
+				.report-item
+					.questionInfo
+						h3 Leading to Lifelong Learning and Service:
+						.response-rate 104/698 responded
+					+addStats
+
+			div(role="tabpanel" class="tab-pane fade" id="overall")
+				h2 Comparing this course with other university courses you have taken, please indicate an OVERALL rating for the following:
+
+				.report-item
+					.questionInfo
+						h3 Instructor: Borup, Michael Brett
+						.response-rate 104/698 responded
+					+addStats
+
+			div(role="tabpanel" class="tab-pane fade" id="work") 
+				h2 Time Spent Outside of Class
+
+				.report-item
+					.questionInfo
+						h3 For this course, about how many hours per week did you spend out of class (doing assignments, readings, etc.)?
+						.response-rate 104/698 responded
+						.stats
+							img.chart.workload(src="svg/chart-svg.php?title=Workload+per+credit+hour&legendY%5B0%5D=4&legendY%5B1%5D=3&legendY%5B2%5D=2&legendY%5B3%5D=1&legendY%5B4%5D=0&legendX%5B0%5D=Section&legendX%5B1%5D=Dept&legendX%5B2%5D=College&legendX%5B3%5D=Univ&decimals=1&data%5B0%5D=2.6&data%5B1%5D=2.5&data%5B2%5D=2.5&data%5B3%5D=2.1")
+					+addComments
+
+			div(role="tabpanel" class="tab-pane fade" id="grading")
+				h2 Grading
+
+				.report-item
+					.questionInfo
+						img.chart.gpa(src="svg/chart-svg.php?title=Mean+GPA&legendY%5B0%5D=4&legendY%5B1%5D=3&legendY%5B2%5D=2&legendY%5B3%5D=1&legendY%5B4%5D=0&legendX%5B0%5D=Section&legendX%5B1%5D=Dept&legendX%5B2%5D=College&legendX%5B3%5D=Univ&decimals=2&data%5B0%5D=3.6&data%5B1%5D=3.28&data%5B2%5D=3.47&data%5B3%5D=3.4")
+						img.chart.distribution(src="svg/chart-svg.php?title=Grade+distribution+%28%25%29&legendY%5B0%5D=A&legendY%5B1%5D=B&legendY%5B2%5D=C&legendY%5B3%5D=D&legendY%5B4%5D=E&legendY%5B5%5D=W&legendX%5B0%5D=Section&legendX%5B1%5D=Dept&legendX%5B2%5D=College&legendX%5B3%5D=Univ&decimals=1&data%5B0%5D%5B0%5D=42.6&data%5B0%5D%5B1%5D=31.6&data%5B0%5D%5B2%5D=15.5&data%5B0%5D%5B3%5D=6.8&data%5B0%5D%5B4%5D=3.1&data%5B0%5D%5B5%5D=7.1&data%5B1%5D%5B0%5D=43.9&data%5B1%5D%5B1%5D=40.3&data%5B1%5D%5B2%5D=7.8&data%5B1%5D%5B3%5D=3.1&data%5B1%5D%5B4%5D=1.2&data%5B1%5D%5B5%5D=3.6&data%5B2%5D%5B0%5D=57.5&data%5B2%5D%5B1%5D=33.2&data%5B2%5D%5B2%5D=4.9&data%5B2%5D%5B3%5D=1.2&data%5B2%5D%5B4%5D=1&data%5B2%5D%5B5%5D=2.2&data%5B3%5D%5B0%5D=56.6&data%5B3%5D%5B1%5D=26.8&data%5B3%5D%5B2%5D=7.9&data%5B3%5D%5B3%5D=2.2&data%5B3%5D%5B4%5D=2.1&data%5B3%5D%5B5%5D=3.3")
 
 
 
