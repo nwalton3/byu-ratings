@@ -338,11 +338,16 @@ $med-break: 37.5em
 	// .report-header
 	// 	position: running(header)
 
-	header, .nav-container, .report-header, .nav-tabs, .print-btn, .tab-pane h2
-		display: none
+	header, .nav-container, .report-header, .nav-tabs, .print-btn, .tab-pane h2, #grading .report-item
+		display: none !important
 
 	// .tab-pane
 	// 	page-break-after: always
+
+	
+	.report-item
+		&:last-child
+			border-bottom: 1px solid #bbb
 
 	#overview.active
 		.ratings.aspectratio
